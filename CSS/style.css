@@ -25,7 +25,7 @@ body {
 
   .menu-icon:hover{
     box-shadow: 0 0 5px 5px #ffffff;
-    transition: box-shadow .5s ease;
+    transition: box-shadow .25s ease;
   }
 
   /* Sidebar */
