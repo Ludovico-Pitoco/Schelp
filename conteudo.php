@@ -20,11 +20,11 @@
 
     <!-- Sidebar -->
     <div id="sidebar" class="sidebar">
-        <a href="index.html">Início</a>
-        <a href="tarefas.html">Tarefas</a>
-        <a href="conteudo.html">Conteúdos</a>
-        <a href="config.html">Configurações</a>
-        <a href="feedback.html">Feedback</a>
+        <a href="index.php">Início</a>
+        <a href="tarefas.php">Tarefas</a>
+        <a href="conteudo.php">Conteúdos</a>
+        <a href="config.php">Configurações</a>
+        <a href="feedback.php">Feedback</a>
     </div>
 </body>
 
