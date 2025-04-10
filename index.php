@@ -15,7 +15,7 @@
     <!-- Navbar -->
     <div class="navbar">
         <span class="menu-icon" onclick="openSidebar()">☰</span>
-        <p>SCHELP</p>
+        <p style="margin-left: 25px">SCHELP</p>
     </div>
 
     <!-- Sidebar -->
