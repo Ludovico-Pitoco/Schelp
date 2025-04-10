@@ -24,7 +24,7 @@ body {
   }
 
   .menu-icon:hover{
-    box-shadow: 0 0 0 2.5px #ffffff;
+    box-shadow: 0 0 0 5px #ffffff;
     transition: box-shadow .25s ease;
   }
 
