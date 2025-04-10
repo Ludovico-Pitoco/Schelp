@@ -24,7 +24,8 @@ body {
   }
 
   .menu-icon:hover{
-    background-color: rgba(128, 0, 128, 0.623);
+    box-shadow: 0px 0px 2.5px 2.5px rgba(128, 0, 128, 0.61);
+    transition: 1s ease;
   }
 
   /* Sidebar */
