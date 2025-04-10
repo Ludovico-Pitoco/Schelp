@@ -16,6 +16,7 @@
     <div class="navbar">
         <span class="menu-icon" onclick="openSidebar()">☰</span>
         <p style="margin-left: 25px">SCHELP</p>
+        <img src="IMG/logo.png" align="center">
     </div>
 
     <!-- Sidebar -->
