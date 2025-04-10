@@ -22,7 +22,7 @@
 
     <!-- Sidebar -->
     <div id="sidebar" class="sidebar">
-        <a href="index.html">Início</a>
+        <a href="index.php">Início</a>
         <a href="tarefas.html">Tarefas</a>
         <a href="conteudo.html">Conteúdos</a>
         <a href="config.html">Configurações</a>
