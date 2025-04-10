@@ -6,7 +6,7 @@ body {
   /*Importando a fonte jersey*/
   @font-face{
     font-family: jersey;
-    src: url(../FONTS/jersey/Jersey\ M54.rtf);
+    src: url(../FONTS/jersey/Jersey\ M54.ttf);
   }
 
   /* Navbar */
@@ -17,10 +17,6 @@ body {
     padding: 15px;
     display: flex;
     align-items: center;
-  }
-
-  p{
-    font-family: jersey;
   }
 
   .menu-icon {
