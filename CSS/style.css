@@ -19,6 +19,10 @@ body {
     align-items: center;
   }
 
+  p{
+    font-family: jersey;
+  }
+
   .menu-icon {
     font-size: 24px;
     cursor: pointer;
