@@ -20,9 +20,9 @@
     <div id="sidebar" class="sidebar">
         <a href="index.php">Início</a>
         <a href="tarefas.php">Tarefas</a>
-        <a href="#">Conteúdos</a>
-        <a href="#">Configurações</a>
-        <a href="#">Feedback</a>
+        <a href="conteudo.php">Conteúdos</a>
+        <a href="config.php">Configurações</a>
+        <a href="feedback.php">Feedback</a>
     </div>
 </body>
 </html>
