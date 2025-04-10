@@ -15,6 +15,7 @@
     <!-- Navbar -->
     <div class="navbar">
         <span class="menu-icon" onclick="openSidebar()">☰</span>
+        <input type="text" value="SCHELP">
     </div>
 
     <!-- Sidebar -->
