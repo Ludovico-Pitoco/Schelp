@@ -3,10 +3,17 @@ body {
     font-family: Arial, sans-serif;
   }
 
+  /*Importando a fonte jersey*/
+  @font-face{
+    font-family: jersey;
+    src: url(../FONTS/jersey/Jersey\ M54.rtf);
+  }
+
   /* Navbar */
   .navbar {
     background-color: #6a0dad; /* Roxo */
     color: white;
+    font-family: jersey;
     padding: 15px;
     display: flex;
     align-items: center;
