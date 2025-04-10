@@ -23,6 +23,10 @@ body {
     cursor: pointer;
   }
 
+  .menu-icon:hover{
+    background-color: rgba(128, 0, 128, 0.623);
+  }
+
   /* Sidebar */
   .sidebar {
     height: 100%;
