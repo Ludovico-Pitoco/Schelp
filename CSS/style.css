@@ -24,6 +24,7 @@ body {
   }
 
   .menu-icon:hover{
+    border-radius: 5px;
     box-shadow: 0 0 0 2.5px #ffffff;
     transition: box-shadow .25s ease;
   }
