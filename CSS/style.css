@@ -79,5 +79,9 @@ body {
     font-family: jersey; 
     font-weight: bold; 
     font-size: xx-large;
-    padding:2.5px;
+    padding:5px;
+  }
+
+  tr, td{
+    margin:5px;
   }
