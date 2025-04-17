@@ -82,6 +82,9 @@ body {
     padding:5px;
   }
 
-  tr, td{
+  tr{
     margin:5px;
+  }
+  td{
+    margin:50px;
   }
