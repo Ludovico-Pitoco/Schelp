@@ -13,6 +13,9 @@ body {
     font-family: jersey;
     font-weight: bold;
   }
+  .titulo{
+    font-size: 5vw;
+  }
 
   /* Navbar */
   .navbar {
@@ -71,20 +74,19 @@ body {
   }
 
   .conteudos{
-    border-radius: 5px;
+    width:20vw;
+    border-radius: 1vw;
     border-style: solid;
-    border-width: 1px;
+    border-width: .15vw;
     border-color:rgb(0, 0, 0)ed;
-    box-shadow: inset 0 -10px #5e2a9e;
+    box-shadow: inset 0 -.75vw #5e2a9e;
     font-family: jersey; 
     font-weight: bold; 
-    font-size: xx-large;
+    font-size: 2vw;
     padding:5px;
+    cursor:pointer;
   }
 
-  tr{
-    margin:5px;
-  }
-  td{
-    margin:50px;
+  tr, td{
+    padding:10px;
   }
