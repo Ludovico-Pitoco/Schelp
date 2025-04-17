@@ -17,6 +17,19 @@ body {
     font-family: geoform;
     font-weight: bold;
   }
+  input[type=text], select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input::placeholder{
+    font-size:1vw;
+  }
   .titulo{
     font-size: 3.5vw;
   }
@@ -28,6 +41,24 @@ body {
     padding: 15px;
     display: flex;
     align-items: center;
+  }
+
+  .botao{
+    border:none;
+    outline:none;
+    cursor:pointer;
+    width:8vw;
+    height:3vw;
+    font-family: geoform;
+    border-radius:.35vw;
+    background-color: #5e2a9e;
+    box-shadow: 0 .5vw #4b0082;
+    color:white;
+  }
+  .botao:active{
+    box-shadow: 0 0 black;
+    transform: translateY(.5vw);
+    background-color: #6c34b1;
   }
 
   .menu-icon {
