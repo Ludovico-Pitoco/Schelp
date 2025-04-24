@@ -123,26 +123,9 @@ body {
     cursor:pointer;
     overflow: hidden;
   }
-  .conteudos::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    background-color: rgba(0, 0, 0, 0.103); /* cinza translúcido */
-    border-radius: 100%;
-    transform: translate(-50%, -50%);
-    transition: width 0.15s ease, height 0.15s ease;
-    z-index: -1;
-  }
-  .conteudos:active::after {
-    width: 200%;
-    height: 500%;
-  }
-  .conteudos span {
-    position: relative;
-    z-index: 1;
+  .conteudos:active{
+    transform:translateY(.75vw);
+    box-shadow:none;
   }
 
   tr, td{
