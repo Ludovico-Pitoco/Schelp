@@ -149,4 +149,23 @@ body {
     padding:10px;
   }
 
+  .tarefas {
+    width: 200px;
+    height: 120px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 15px;
+    font-family: jersey;
+    font-size: 16px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+  }
+
+  .tarefas:hover {
+    transform: scale(1.05);
+    background-color: #e0e0e0;
+  }
+
+
   
