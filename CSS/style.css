@@ -174,7 +174,7 @@ body {
     border-radius: 10px;
     margin: 10px 0;
     padding: 20px;
-    font-family: 'Geoform', sans-serif;
+    font-family: geoform;
     font-size: 17px;
     font-weight: normal;
     color: #222;
