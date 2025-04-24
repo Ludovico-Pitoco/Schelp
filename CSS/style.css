@@ -156,7 +156,7 @@ body {
   }
 
 body {
-    font-family: 'Geoform', sans-serif;
+    font-family: geoform;
 }
 
 .lista-tarefas-container {
@@ -191,5 +191,5 @@ body {
 }
 
 .navbar, .sidebar, .titulo {
-    font-family: 'Geoform', sans-serif;
+    font-family: geoform;
 }
