@@ -64,7 +64,7 @@ error_reporting(0);
 
 $nome = $_POST['nome'];
 $email = $_POST['email'];
-$sugestao = $_POST['sugestao']
+$sugestao = $_POST['sugestao'];
 
 $insercao = "INSERT INTO feedback (nomefeedback, emailfeedback, sugestao) VALUES ('$nome', '$email' '$sugestao')";
 
