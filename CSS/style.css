@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
   }
 
-  /*Importando a fonte jersey*/
+  /*Importando as fontes*/
   @font-face{
     font-family: jersey;
     src: url(../FONTS/jersey/Jersey\ M54.ttf);
@@ -11,6 +11,29 @@ body {
   @font-face{
     font-family: geoform;
     src: url(../FONTS/geoform/Geoform-ExtraBold.otf);
+  }
+
+  @font-face{
+    font-family: schelploco;
+    src: url(../FONTS/schelploco/Backso.ttf);
+  }
+
+  @font-face{
+    font-family: benevenido;
+    src: url(../FONTS/benevenido/Game\ Bubble.ttf);
+  }
+
+  .txtInicio{
+    text-align: center;
+    font-size: xx-large;
+  }
+
+  #recebendo{
+    font-family: benevenido;
+  }
+
+  #schelp{
+    font-family: schelploco;
   }
 
   h1,h2,h3{
