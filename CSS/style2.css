@@ -16,12 +16,15 @@ body {
 /* Painel lateral */
 .menu {
   width: 250px;
-  top: -20px;
+  top: 0;
+  max-height: 100vh;
   background-color: #2c3e50;
   color: white;
   display: flex;
   flex-direction: column;
   padding: 20px;
+  overflow: auto;
+  
 }
 
 /* Perfil */
