@@ -34,7 +34,7 @@
 
         <div style="margin:2vw;">
 
-        <form method="post">
+        <form method="POST">
 
             <p>Nome:</p>
             <input type="text" name="nome" maxlength="80" required autocomplete="off" placeholder="Insira seu Nome:"><br>
@@ -54,26 +54,28 @@
     </div>
 
 </body>
-
 </html>
 
-
 <?php
-
 error_reporting(0);
-
 $nome = $_POST['nome'];
 $email = $_POST['email'];
 $sugestao = $_POST['sugestao'];
 
-$insercao = "INSERT INTO feedback (nomefeedback, emailfeedback, sugestao) VALUES ('$nome', '$email' '$sugestao')";
+if(strlen($nome) > 0 && strlen($email) > 0 && strlen($sugestao) > 0)
+{
+
+$insercao = "INSERT INTO feedback (nomefeedback, emailfeedback, sugestao) VALUES ('$nome', '$email', '$sugestao')";
 
 include_once('conexao.php');
 
 if (mysqli_query($conexao, $insercao)) {
     echo "<p>Feedback enviado com sucesso</p>";
 } 
-else {
-    echo "Erro: " . $sql . "<br>" . mysqli_error($conexao);
+else{
+    echo "Erro";
 }
+
+}
+
 ?>
