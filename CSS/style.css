@@ -159,37 +159,45 @@ body {
     font-family: geoform;
 }
 
+/* Estilo geral da lista */
 .lista-tarefas-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas */
+    gap: 20px; /* Espaçamento entre os itens */
     margin: 40px;
-    max-width: 800px;
+    max-width: 900px;
+    justify-items: center;
 }
 
+/* Estilo de cada item de tarefa */
 .tarefa-item {
     width: 100%;
-    background-color: #bfbfbf;
+    background-color: #bfbfbf; /* Fundo mais escuro */
     border-radius: 10px;
     margin: 10px 0;
     padding: 20px;
-    font-family: geoform;
+    font-family: 'Geoform', sans-serif;
     font-size: 17px;
     font-weight: normal;
     color: #222;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
     text-align: left;
-    cursor: pointer;
+    cursor: pointer; /* Mostra que é clicável */
+    display: flex;
+    align-items: center;
 }
 
+/* Ícone da tarefa */
+.icone-tarefa {
+    width: 40px; /* Tamanho da imagem */
+    height: 40px; /* Tamanho da imagem */
+    margin-right: 15px; /* Espaço entre a imagem e o texto */
+}
+
+/* Efeito de hover */
 .tarefa-item:hover {
     background-color: #a6a6a6;
     transform: scale(1.01);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.navbar, .sidebar, .titulo {
-    font-family: geoform;
 }
