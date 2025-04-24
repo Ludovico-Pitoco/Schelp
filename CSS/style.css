@@ -231,3 +231,13 @@ body {
     font-size: 28px;
     margin-top: 30px;
 }
+
+.titulo {
+    font-family: 'Geoform', sans-serif;
+    font-size: 28px;
+    margin: 60px 0 30px 0; /* topo, direita, baixo, esquerda */
+}
+
+.lista-tarefas-container {
+    padding: 0 30px; /* espaço lateral extra */
+}
