@@ -37,13 +37,13 @@
         <form method="post">
 
             <p>Nome:</p>
-            <input type="text" required autocomplete="off" placeholder="Insira seu Nome:"><br>
+            <input type="text" name="nome" maxlength="80" required autocomplete="off" placeholder="Insira seu Nome:"><br>
 
             <p>Email:</p>
-            <input type="email" required autocomplete="off" placeholder="Insira seu Email:">
+            <input type="email" name="email" maxlength="80" required autocomplete="off" placeholder="Insira seu Email:">
 
             <p>Sugestão:</p>
-            <textarea required autocomplete="off" rows="50" placeholder="Insira sua sugestão:" style="width: 40vw; height: 15vw;"></textarea><br><br>
+            <textarea required autocomplete="off" maxlength="300" name="sugestao" placeholder="Insira sua sugestão:" style="width: 40vw; height: 15vw;"></textarea><br><br>
 
             <input class="botao" type="submit" value="Enviar">
 
@@ -56,3 +56,24 @@
 </body>
 
 </html>
+
+
+<?php
+
+error_reporting(0);
+
+$nome = $_POST['nome'];
+$email = $_POST['email'];
+$sugestao = $_POST['sugestao']
+
+$insercao = "INSERT INTO feedback (nomefeedback, emailfeedback, sugestao) VALUES ('$nome', '$email' '$sugestao')";
+
+include_once('conexao.php');
+
+if (mysqli_query($conexao, $insercao)) {
+    echo "<p>Feedback enviado com sucesso</p>";
+} 
+else {
+    echo "Erro: " . $sql . "<br>" . mysqli_error($conexao);
+}
+?>
