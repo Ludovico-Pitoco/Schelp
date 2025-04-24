@@ -5,7 +5,13 @@
   padding: 0;
 }
 
-
+body {
+  display: flex;
+  height: 100vh;
+  font-family: sans-serif;
+  background-color: #fff;
+  color: #333;
+}
 
 /* Painel lateral */
 .menu {
