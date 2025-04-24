@@ -192,10 +192,9 @@ body {
 
 /* Corpo da página com fundo */
 body {
-    font-family: 'Geoform', sans-serif;
+    font-family: geoform;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom right, #e0e0e0, #ffffff); /* Fundo suave */
 }
 
 /* Container de tarefas */
