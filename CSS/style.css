@@ -159,7 +159,7 @@ body {
     font-family: geoform;
 }
 
-/* Importando a fonte Geoform localmente */
+/* Fonte local Geoform */
 @font-face {
     font-family: 'Geoform';
     src: url('../fontes/Geoform.ttf') format('truetype');
@@ -167,7 +167,7 @@ body {
     font-style: normal;
 }
 
-/* Fonte padrão do site */
+/* Estilo base do corpo */
 body {
     font-family: 'Geoform', sans-serif;
     margin: 0;
@@ -175,17 +175,17 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Container com grid de tarefas (duas colunas) */
+/* Container das tarefas */
 .lista-tarefas-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas fixas */
     gap: 20px;
     margin: 40px auto;
     max-width: 900px;
-    padding: 0 20px;
+    padding: 0 30px;
 }
 
-/* Estilo de cada tarefa individual */
+/* Cartão da tarefa */
 .tarefa-item {
     background-color: #bfbfbf;
     border-radius: 10px;
@@ -203,7 +203,7 @@ body {
     min-height: 80px;
 }
 
-/* Imagem ao lado do texto */
+/* Imagem da tarefa */
 .icone-tarefa {
     width: 35px;
     height: 35px;
@@ -211,33 +211,16 @@ body {
     flex-shrink: 0;
 }
 
-/* Efeito visual ao passar o mouse */
+/* Hover visual */
 .tarefa-item:hover {
     background-color: #a6a6a6;
     transform: scale(1.01);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Responsivo para celular: vira 1 coluna */
-@media (max-width: 700px) {
-    .lista-tarefas-container {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Título com fonte Geoform */
+/* Título da página */
 .titulo {
     font-family: 'Geoform', sans-serif;
     font-size: 28px;
-    margin-top: 30px;
-}
-
-.titulo {
-    font-family: 'Geoform', sans-serif;
-    font-size: 28px;
-    margin: 60px 0 30px 0; /* topo, direita, baixo, esquerda */
-}
-
-.lista-tarefas-container {
-    padding: 0 30px; /* espaço lateral extra */
+    margin: 60px 0 30px 0;
 }
