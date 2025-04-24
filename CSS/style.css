@@ -69,44 +69,39 @@ body {
   .menu-icon:hover{
     border-radius: 5px;
     box-shadow: 0 0 0 2.5px #ffffff;
-    transition: box-shadow .25s ease;
+    transition: box-shadow .25s eaase;
   }
 
-  /* Sidebar */
-  .sidebar {
-    height: 100%;
-    width: 250px;
-    position: fixed;
-    top: 0;
-    left: -250px;
-    background-color: #4b0082;
-    padding-top: 60px;
-    transition: 0.3s;
-    z-index: 1000;
-  }
+/* Sidebar à direita */
+.sidebar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  right: -250px; /* antes era left */
+  background-color: #4b0082;
+  padding-top: 60px;
+  transition: 0.3s;
+  z-index: 1000;
+}
 
-  .sidebar a {
-    padding: 15px 25px;
-    display: block;
-    color: white;
-    text-decoration: none;
-    transition: 0.2s;
-  }
+/* Quando a sidebar estiver visível */
+.sidebar.ativa {
+  right: 0;
+}
 
-  .sidebar a:hover {
-    background-color: #5e2a9e;
-  }
+/* Overlay ainda cobre toda a tela */
+.overlay {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
 
-  .overlay {
-    position: fixed;
-    display: none;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-  }
 
   .conteudos{
     position: relative;
