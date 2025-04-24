@@ -153,25 +153,29 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 30px;
+    justify-content: center;
+    margin-top: 40px;
 }
 
 .tarefa-item {
     width: 80%;
     max-width: 600px;
-    background-color: #f0f0f0;
+    background-color: #d9d9d9; /* fundo igual ao dos blocos */
     border-radius: 10px;
-    margin: 10px 0;
-    padding: 15px 20px;
+    margin: 15px 0;
+    padding: 20px;
     font-family: jersey;
     font-size: 18px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    transition: background-color 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s, background-color 0.2s;
+    text-align: center;
 }
 
 .tarefa-item:hover {
-    background-color: #e6e6e6;
+    background-color: #cfcfcf;
+    transform: scale(1.02);
 }
+
 
 
   
