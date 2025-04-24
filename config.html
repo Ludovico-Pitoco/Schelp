@@ -30,47 +30,74 @@
         <a href="feedback.php">Feedback</a>
     </div>
 
-    <aside class="sidebar2">
-        <div class="sidebar-header2">
+    <div class="menu">
+        <div class="profile">
             <div class="avatar">N</div>
-            <div class="user-info">
-                <h2>Naoki0g</h2>
-            </div>
+            <h2>Naoki0g</h2>
         </div>
 
-        <nav class="sidebar-nav2">
+        <nav>
             <ul>
-                <li class="nav-item active" onclick="switchSection('profile')">
-                    <i data-feather="user"></i>
-                    <span>Perfil</span>
-                </li>
-                <li class="nav-item" onclick="switchSection('account')">
-                    <i data-feather="settings"></i>
-                    <span>Conta</span>
-                </li>
-                <li class="nav-item" onclick="switchSection('appearance')">
-                    <i data-feather="eye"></i>
-                    <span>Aparência</span>
-                </li>
-                <li class="nav-item" onclick="switchSection('accessibility')">
-                    <i data-feather="activity"></i>
-                    <span>Acessibilidade</span>
-                </li>
-                <li class="nav-item" onclick="switchSection('notifications')">
-                    <i data-feather="bell"></i>
-                    <span>Notificações</span>
-                </li>
+                <li class="active" onclick="switchSection('perfil', this)"><i data-feather="user"></i> Perfil público</li>
+                <li onclick="switchSection('conta', this)"><i data-feather="settings"></i> Conta</li>
+                <li onclick="switchSection('aparencia', this)"><i data-feather="eye"></i> Aparência</li>
+                <li onclick="switchSection('acessibilidade', this)"><i data-feather="activity"></i> Acessibilidade</li>
+                <li onclick="switchSection('notificacoes', this)"><i data-feather="bell"></i> Notificações</li>
             </ul>
         </nav>
 
-        <div class="sidebar-footer2">
-            <button class="toggle-theme" onclick="toggleTheme()">
-                <i data-feather="sun"></i>
-                <span>Mudar tema</span>
-            </button>
-        </div>
-    </aside>
-    
+        <button class="toggle-theme" onclick="toggleTheme()">
+            <i data-feather="sun"></i> Alternar tema
+        </button>
+    </div>
+
+    <main class="content">
+        <section id="perfil" class="section active">
+            <h1>Perfil público</h1>
+
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" placeholder="Digite seu nome">
+
+
+            <button>Salvar alterações</button>
+        </section>
+
+        <section id="conta" class="section">
+            <h1>Configurações da Conta</h1>
+            <p>Conteúdo da aba "Conta".</p>
+        </section>
+
+        <section id="aparencia" class="section">
+            <h1>Aparência</h1>
+            <p>Configurações de aparência aqui.</p>
+        </section>
+
+        <section id="acessibilidade" class="section">
+            <h1>Acessibilidade</h1>
+            <p>Configurações de acessibilidade.</p>
+        </section>
+
+        <section id="notificacoes" class="section">
+            <h1>Notificações</h1>
+            <p>Preferências de notificação.</p>
+        </section>
+    </main>
+
+    <script>
+        feather.replace();
+
+        function switchSection(id, element) {
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+
+            document.querySelectorAll('.menu nav li').forEach(li => li.classList.remove('active'));
+            element.classList.add('active');
+        }
+
+        function toggleTheme() {
+            document.body.classList.toggle('light');
+        }
+    </script>
 </body>
 
 </html>

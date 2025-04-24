@@ -1,77 +1,141 @@
-.sidebar2 {
-  width: 260px;
-  background-color: #1f1f1f;
-  color: #fff;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.sidebar-header2 {
+body {
   display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
+  height: 100vh;
+  font-family: sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Painel lateral */
+.menu {
+  width: 250px;
+  background-color: #2c3e50;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* Perfil */
+.menu .profile {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .avatar {
-  width: 48px;
-  height: 48px;
-  background-color: #3b3b3b;
-  color: white;
-  font-size: 1.5rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #3498db;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
+  margin: 0 auto 10px;
+  font-weight: bold;
 }
 
-.user-info h2 {
-  margin: 0;
-  font-size: 1.2rem;
-}
-
-.user-info p {
-  margin: 0;
-  font-size: 0.875rem;
-  color: #aaa;
-}
-
-.sidebar-nav2 ul {
+/* Navegação */
+.menu nav ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
-.nav-item {
+.menu nav ul li {
+  padding: 10px;
+  cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  padding: 0.75rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.2s;
+  gap: 10px;
+  transition: background 0.2s;
 }
 
-.nav-item:hover,
-.nav-item.active {
-  background-color: #2d2d2d;
+.menu nav ul li.active,
+.menu nav ul li:hover {
+  background-color: #34495e;
 }
 
-.sidebar-footer {
-  margin-top: auto;
-  padding-top: 1rem;
-  border-top: 1px solid #333;
-}
-
+/* Botão de tema */
 .toggle-theme {
-  background: none;
+  margin-top: auto;
+  padding: 10px;
+  background-color: transparent;
+  color: white;
   border: none;
-  color: #fff;
+  cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 10px;
+}
+
+/* Conteúdo principal */
+.content {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+  background-color: #fdfdfd;
+}
+
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+}
+
+/* Formulário */
+label {
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: 500;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #3498db;
+  color: white;
+  border: none;
   cursor: pointer;
-  padding: 0.75rem 0;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Tema claro */
+body.light {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+body.light .menu {
+  background-color: #ecf0f1;
+  color: #333;
+}
+
+body.light .menu nav ul li.active,
+body.light .menu nav ul li:hover {
+  background-color: #dcdcdc;
 }
