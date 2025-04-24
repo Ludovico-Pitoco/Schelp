@@ -1,13 +1,15 @@
-<!-- Caíque - Tarefas Estilo Lista com Imagens -->
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefas | Schelp</title>
     <link rel="stylesheet" href="CSS/style.css">
     <script src="JS/script.js"></script>
-    <title>Tarefas | Schelp</title>
+
+    <!-- Fonte Geoform -->
+    <link href="https://fonts.googleapis.com/css2?family=Geoform&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -17,7 +19,7 @@
     <!-- Navbar -->
     <div class="navbar">
         <span class="menu-icon" onclick="openSidebar()">☰</span>
-        <p style="margin-left: 25px; font-family: jersey; font-weight: bold; font-size:x-large; letter-spacing: 2px;">SCHELP</p>
+        <p style="margin-left: 25px; font-family: jersey; font-weight: bold; font-size: x-large; letter-spacing: 2px;">SCHELP</p>
     </div>
 
     <!-- Sidebar -->
@@ -34,24 +36,24 @@
 
     <!-- Lista de Tarefas -->
     <div class="lista-tarefas-container">
-        <!-- Primeira Linha -->
-        <div class="tarefa-item">
+        <div class="tarefa-item" onclick="abrirTarefa('matematica')">
             <img src="imagens/matematica.png" alt="Matemática" class="icone-tarefa">
-            <p>📘 <strong>Matemática:</strong> Capítulo 5 - Equações | Entrega: 26/04 📍</p>
-        </div>
-        <div class="tarefa-item">
-            <img src="imagens/historia.png" alt="História" class="icone-tarefa">
-            <p>📕 <strong>História:</strong> Segunda Guerra Mundial | Entrega: 27/04 📍</p>
+            <p>📘 <strong>Matemática:</strong> Capítulo 5 - Equações<br>Entrega: 26/04</p>
         </div>
 
-        <!-- Segunda Linha -->
-        <div class="tarefa-item">
-            <img src="imagens/ingles.png" alt="Inglês" class="icone-tarefa">
-            <p>🎭 <strong>Inglês:</strong> Verb to be (atividade) | Entrega: 28/04 📍</p>
+        <div class="tarefa-item" onclick="abrirTarefa('historia')">
+            <img src="imagens/historia.png" alt="História" class="icone-tarefa">
+            <p>📕 <strong>História:</strong> Segunda Guerra Mundial<br>Entrega: 27/04</p>
         </div>
-        <div class="tarefa-item">
+
+        <div class="tarefa-item" onclick="abrirTarefa('ingles')">
+            <img src="imagens/ingles.png" alt="Inglês" class="icone-tarefa">
+            <p>📙 <strong>Inglês:</strong> Verb to be (atividade)<br>Entrega: 28/04</p>
+        </div>
+
+        <div class="tarefa-item" onclick="abrirTarefa('quimica')">
             <img src="imagens/quimica.png" alt="Química" class="icone-tarefa">
-            <p>⚗️ <strong>Química:</strong> Reações Químicas | Entrega: 29/04 📍</p>
+            <p>⚗️ <strong>Química:</strong> Reações Químicas<br>Entrega: 29/04</p>
         </div>
     </div>
 
