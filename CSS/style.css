@@ -212,7 +212,7 @@ body {
 
 .titulo {
     font-family: 'Geoform', sans-serif;
-    font-size: 70px;           /* Tamanho maior */
+    font-size: 100px;           /* Tamanho maior */
     text-align: center;        /* Centralizado */
     margin: 70px 0 40px 0;     /* Mais espaçamento */
     color: #333;
