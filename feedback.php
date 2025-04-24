@@ -25,7 +25,7 @@
         <a href="tarefas.html">Tarefas</a>
         <a href="conteudo.html">Conteúdos</a>
         <a href="config.html">Configurações</a>
-        <a href="feedback.html">Feedback</a>
+        <a href="feedback.php">Feedback</a>
     </div>
 
     <h1 align="center" class="titulo">Feedback</h1>
@@ -34,20 +34,20 @@
 
         <div style="margin:2vw;">
 
-        <p>Nome:</p>
-        <input type="text" required autocomplete="off" placeholder="Insira seu Nome:"><br>
+        <form method="post">
 
-        <p>Email:</p>
-        <input type="text" required autocomplete="off" placeholder="Insira seu Email:">
+            <p>Nome:</p>
+            <input type="text" required autocomplete="off" placeholder="Insira seu Nome:"><br>
 
-        </div>
+            <p>Email:</p>
+            <input type="email" required autocomplete="off" placeholder="Insira seu Email:">
 
-        <div style="margin:2vw;">
+            <p>Sugestão:</p>
+            <textarea required autocomplete="off" rows="50" placeholder="Insira sua sugestão:" style="width: 40vw; height: 15vw;"></textarea><br><br>
 
-        <p>Sugestão:</p>
-        <input type="text" required autocomplete="off" placeholder="Insira sua sugestão:" style="width: 40vw; height: 15vw;"><br><br>
+            <input class="botao" type="submit" value="Enviar">
 
-        <input class="botao" type="submit" value="Enviar">
+        </form>
 
         </div>
 
