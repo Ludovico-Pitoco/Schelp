@@ -24,8 +24,16 @@ body {
   }
 
   .txtInicio{
-    text-align: center;
+    align-content: center;
     font-size: xx-large;
+  }
+  
+  #p1{
+    font-family: benevenido;
+  }
+
+  #p2{
+    font-family: schelploco;
   }
 
   h1,h2,h3{
