@@ -30,73 +30,56 @@
         <a href="feedback.php">Feedback</a>
     </div>
 
-    <div class="container2">
-        <aside class="sidebar2">
-            <div class="profile">
-                <div class="avatar">N</div>
-                <h2>Naoki0g</h2>
-            </div>
-            <nav>
-                <ul>
-                    <li class="active" onclick="switchSection('profile')"><i data-feather="user"></i> Perfil</li>
-                    <li onclick="switchSection('account')"><i data-feather="settings"></i> Conta</li>
-                    <li onclick="switchSection('appearance')"><i data-feather="eye"></i> Aparência</li>
-                    <li onclick="switchSection('accessibility')"><i data-feather="activity"></i> Acessibilidade</li>
-                    <li onclick="switchSection('notifications')"><i data-feather="bell"></i> Notificações</li>
-                </ul>
-            </nav>
-
-
-        </aside>
-
-        <main class="content">
-            <section id="profile" class="section active">
-
-
-                <label for="name">Nome</label>
-                <input type="text" id="name">
-
-                <button>Salvar</button>
-            </section>
-
-            <section id="account" class="section">
-                <p>Conteúdo da aba "Conta".</p>
-            </section>
-
-            <section id="appearance" class="section">
-                <p>Configurações de aparência aqui.</p>
-
-                <button class="toggle-theme" onclick="toggleTheme()">
-                    </i> Mudar tema
-                </button>
-
-            </section>
-
-            <section id="accessibility" class="section">
-                <p>Configurações de acessibilidade.</p>
-            </section>
-
-            <section id="notifications" class="section">
-                <p>Preferências de notificação.</p>
-            </section>
-        </main>
-    </div>
-
-    <script>
-        feather.replace();
-
-        function switchSection(id) {
-            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-            document.getElementById(id).classList.add('active');
-
-            document.querySelectorAll('.sidebar nav li').forEach(li => li.classList.remove('active'));
-            event.currentTarget.classList.add('active');
-        }
-
-        function toggleTheme() {
-            document.body.classList.toggle('light');
-        }
-    </script>
+    <main class="content">
+        <section id="profile" class="section active">
+            <h1>Perfil público</h1>
+    
+            <label for="name">Nome</label>
+            <input type="text" id="name" placeholder="Digite seu nome">
+    
+            <label for="email">E-mail público</label>
+            <select id="email">
+                <option>Selecione um e-mail verificado</option>
+            </select>
+    
+            <label for="bio">Biografia</label>
+            <textarea id="bio" placeholder="Fale um pouco sobre você"></textarea>
+    
+            <label for="pronouns">Pronomes</label>
+            <select id="pronouns">
+                <option>Não especificar</option>
+                <option>Ele/Dele</option>
+                <option>Ela/Dela</option>
+                <option>Elu/Delu</option>
+            </select>
+    
+            <label for="url">URL</label>
+            <input type="url" id="url" placeholder="https://seusite.com.br">
+    
+            <button>Salvar alterações</button>
+        </section>
+    
+        <section id="account" class="section">
+            <h1>Configurações da Conta</h1>
+            <p>Conteúdo da aba "Conta".</p>
+        </section>
+    
+        <section id="appearance" class="section">
+            <h1>Aparência</h1>
+            <p>Configurações de aparência aqui.</p>
+        </section>
+    
+        <section id="accessibility" class="section">
+            <h1>Acessibilidade</h1>
+            <p>Configurações de acessibilidade.</p>
+        </section>
+    
+        <section id="notifications" class="section">
+            <h1>Notificações</h1>
+            <p>Preferências de notificação.</p>
+        </section>
+    </main>
+    
 </body>
 
 </html>
