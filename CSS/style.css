@@ -155,23 +155,36 @@ body {
     padding:10px;
   }
 
-  .tarefas {
-    width: 200px;
-    height: 120px;
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    margin: 20px;
-    padding: 15px;
-    font-family: jersey;
-    font-size: 16px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease;
-  }
+  .lista-tarefas-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 40px;
+    max-width: 800px;
+}
 
-  .tarefas:hover {
-    transform: scale(1.05);
-    background-color: #e0e0e0;
-  }
+.tarefa-item {
+    width: 100%;
+    background-color: #bfbfbf;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 20px;
+    font-family: jersey;
+    font-size: 17px;
+    font-weight: normal;
+    color: #222;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    text-align: left;
+    cursor: pointer;
+}
+
+.tarefa-item:hover {
+    background-color: #a6a6a6;
+    transform: scale(1.01);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
 
 
   
