@@ -136,7 +136,7 @@ body {
     left: 50%;
     width: 0;
     height: 0;
-    background-color: rgba(0, 0, 0, 0.103); /* cinza translúcido */
+    background-color: rgba(0, 0, 0, 0.103);
     border-radius: 100%;
     transform: translate(-50%, -50%);
     transition: width 0.15s ease, height 0.15s ease;
@@ -155,7 +155,11 @@ body {
     padding:10px;
   }
 
-  .lista-tarefas-container {
+body {
+    font-family: 'Geoform', sans-serif;
+}
+
+.lista-tarefas-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -170,7 +174,7 @@ body {
     border-radius: 10px;
     margin: 10px 0;
     padding: 20px;
-    font-family: jersey;
+    font-family: 'Geoform', sans-serif;
     font-size: 17px;
     font-weight: normal;
     color: #222;
@@ -186,5 +190,6 @@ body {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-
-  
+.navbar, .sidebar, .titulo {
+    font-family: 'Geoform', sans-serif;
+}
