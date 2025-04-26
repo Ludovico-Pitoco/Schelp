@@ -21,14 +21,14 @@
     </div>
 
     <!-- Sidebar -->
-    <div id="sidebar2" class="sidebar2">
+    <div id="sidebar" class="sidebar">
         <a href="index.html">Início</a>
         <a href="tarefas.html">Tarefas</a>
         <a href="conteudo.html">Conteúdos</a>
         <a href="config.html">Configurações</a>
         <a href="feedback.php">Feedback</a>
     </div>
-
+<div class="principal">
     <div class="menu">
         <div class="profile">
             <div class="avatar">N</div>
@@ -37,7 +37,7 @@
 
         <nav>
             <ul>
-                <li class="active" onclick="switchSection('perfil', this)"><i data-feather="user"></i> Perfil público</li>
+                <li class="active" onclick="switchSection('perfil', this)"><i data-feather="user"></i> Perfil</li>
                 <li onclick="switchSection('conta', this)"><i data-feather="settings"></i> Conta</li>
                 <li onclick="switchSection('aparencia', this)"><i data-feather="eye"></i> Aparência</li>
                 <li onclick="switchSection('acessibilidade', this)"><i data-feather="activity"></i> Acessibilidade</li>
@@ -45,14 +45,12 @@
             </ul>
         </nav>
 
-        <button class="toggle-theme" onclick="toggleTheme()">
-            <i data-feather="sun"></i> Alternar tema
-        </button>
+        
     </div>
 
     <main class="content">
         <section id="perfil" class="section active">
-            <h1>Perfil público</h1>
+            <h1>Perfil</h1>
 
             <label for="nome">Nome</label>
             <input type="text" id="nome" placeholder="Digite seu nome">
@@ -81,7 +79,7 @@
             <p>Preferências de notificação.</p>
         </section>
     </main>
-
+</div>
     <script>
         feather.replace();
 
