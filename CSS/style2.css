@@ -8,7 +8,7 @@
 /* Painel lateral */
 .menu {
   width: 250px;
-  height: 100vh; /* Garantir que o menu ocupe toda a altura da página */
+  height: 200px; /* Garantir que o menu ocupe toda a altura da página */
   max-width: 80vh;
   position: fixed; /* Fixar o menu na lateral */
   top: 0; /* Começar do topo da página */
@@ -19,7 +19,6 @@
   flex-direction: column;
   padding: 20px;
   overflow-y: auto; /* Permitir rolagem vertical caso o conteúdo ultrapasse a altura da tela */
-  padding-bottom: 20px;
 }
 
 /* Perfil */
