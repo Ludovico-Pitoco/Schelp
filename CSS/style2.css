@@ -9,7 +9,7 @@
 .menu {
   width: 250px;
   height: 100vh; /* Garantir que o menu ocupe toda a altura da página */
-  max-width: 80vh;
+  max-width: 100vh;
   position: fixed; /* Fixar o menu na lateral */
   top: 0; /* Começar do topo da página */
   left: 0; /* Posicionar na lateral esquerda */
