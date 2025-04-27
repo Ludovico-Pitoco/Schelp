@@ -18,7 +18,6 @@
   flex-direction: column;
   padding: 20px;
   overflow-y: auto; /* Permitir rolagem vertical caso o conteúdo ultrapasse a altura da tela */
-  margin-top: 60px;
 }
 
 /* Perfil */
@@ -126,6 +125,6 @@ button:hover {
 .principal {
   display: flex;
   justify-content: space-between;
-  
   margin-bottom: 20px;
+  margin-top: 60px;
 }
