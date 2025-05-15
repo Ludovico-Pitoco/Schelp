@@ -8,6 +8,14 @@ body {
   overflow: hidden;
 }
 
+.tema-claro{
+  background-color: #FFF;
+}
+
+.tema-escuro{
+  background-color: #000;
+}
+
 /*Importando as fontes*/
 @font-face{
   font-family: jersey;
