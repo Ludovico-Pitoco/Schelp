@@ -15,7 +15,7 @@
   position: fixed; /* Fixar o menu na lateral */
   top: 0; /* Começar do topo da página */
   left: 0; /* Posicionar na lateral esquerda */
-  background-color: #55079e;
+  background-color: #6A0DAD;
   color: white;
   display: flex;
   flex-direction: column;
@@ -59,7 +59,7 @@
 
 .menu nav ul li.active,
 .menu nav ul li:hover {
-  background-color: #34495e;
+  background-color: #55079E;
 }
 
 /* Botão de tema */
