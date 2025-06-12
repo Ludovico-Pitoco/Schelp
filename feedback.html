@@ -55,27 +55,3 @@
 
 </body>
 </html>
-
-<?php
-error_reporting(0);
-$nome = $_POST['nome'];
-$email = $_POST['email'];
-$sugestao = $_POST['sugestao'];
-
-if(strlen($nome) > 0 && strlen($email) > 0 && strlen($sugestao) > 0)
-{
-
-$insercao = "INSERT INTO feedback (nomefeedback, emailfeedback, sugestao) VALUES ('$nome', '$email', '$sugestao')";
-
-include_once('conexao.php');
-
-if (mysqli_query($conexao, $insercao)) {
-    echo "<p>Feedback enviado com sucesso</p>";
-} 
-else{
-    echo "Erro";
-}
-
-}
-
-?>
