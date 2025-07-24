@@ -12,5 +12,7 @@
     <script src="script/script.js"></script>
 
     <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet">
-   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
 

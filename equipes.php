@@ -7,6 +7,8 @@
 
 <?php include("sidebar.php");?> <!--Inclui a sidebar-->
 
+<div class="barra-topo"><h1 class="titulo-schelp">SCHELP<h1></div> <!-- Barra do topo do site-->
+
 <div class="conteudo"> <!--Conteúdo do site-->
 
 
