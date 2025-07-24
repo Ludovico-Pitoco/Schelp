@@ -1,0 +1,56 @@
+*{ /*Configurações Básicas da Página*/
+  margin: 0; /*Margem 0*/
+  padding: 0; /*Espaçamento 0*/
+  box-sizing: border-box; /*Especifica o comportamento do "Width" e "Height"*/
+}
+
+.principal{
+  display:flex; /*Um tipo de display que deixa tudo flexível*/
+}
+
+#sidebar{ /*Sidebar*/
+  height: 100vh; /*Altura da navbar (Tela inteira)*/
+  width: 90px; /*Largura da navbar*/
+  position: fixed; /*Deixa ele sempre na mesma posição, mesmo que o usuário role para baixo*/
+  background-color: #9231FF;
+  transition: .5s ease; /*Animaçãozinha para deixar bonitinho*/
+  display: flex; /*Um tipo de display que deixa tudo flexível*/
+  flex-direction: column; /*Deixa o display flex na vertical em formato de coluna*/
+  align-items: center; /*Alinha horizontalmente*/
+  overflow:hidden; /*Tudo o que vazar da tela vai ficar invisível*/
+}
+
+#menu-sidebar{ /*Macaco*/
+  fill:transparent; /*Deixar o macaco transparente*/
+  width: 75px; /*Largura do macaco, a altura se ajusta sozinha conforme a largura*/
+  padding: 20px 0; /*Espaço para nada ficar encostando no macaco*/
+  flex-shrink: 0; /*Faz com que os outros itens não encolham o macaco caso a resolução mude*/
+  display: flex; /*Um tipo de display que deixa tudo flexível*/
+  align-items: center; /*Alinha horizontalmente*/
+  justify-content: center; /*Alinha verticalmente, esse e o de cima são uma dupla dinâmica*/
+}
+
+menu{ /*Itens da sidebar*/
+  width:100%; /*Largura dos botões da sidebar, todos estão ocupando 100% da largura da sidebar*/
+  overflow-y:scroll; /*Ativa um scroll para descer pela sidebar caso a tela seja muito pequena*/
+  display: flex; /*Um tipo de display que deixa tudo flexível*/
+  flex-direction: column; /*Deixa o display flex na vertical em formato de coluna*/
+
+  scrollbar-width: none; /* Esconder a barra de rolagem no Firefox */
+  -ms-overflow-style: none; /* Esconder a barra de rolagem no Chrome, Edge e Safari */
+}
+menu{
+  ::-webkit-scrollbar {
+  display: none; /* Esconder a barra de rolagem no WebKit (Chrome, Safari) */
+}
+}
+
+li{ /*Item da sidebar*/
+  list-style: none; /*Tira os pontinhos feios que as listas HTML tem por padrão*/
+  margin-bottom: 50px; /*Distância entre os itens*/
+}
+
+.current-page{
+  border-left: 5px solid #4e00a6; /*Coloca uma bordinha no canto esquerdo do botão correspondente à página em que o usuário está*/
+  margin-right:5px; /*Empurra o item que tem a bordinha um pouco para a esquerda para ele não ficar torto*/
+}
