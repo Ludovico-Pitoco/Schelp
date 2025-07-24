@@ -4,6 +4,10 @@
   box-sizing: border-box; /*Especifica o comportamento do "Width" e "Height"*/
 }
 
+h1{
+  font-family:Koulen;
+}
+
 .principal{
   display:flex; /*Um tipo de display que deixa tudo flexível*/
 }
@@ -16,8 +20,8 @@
   transition: .5s ease; /*Animaçãozinha para deixar bonitinho*/
   display: flex; /*Um tipo de display que deixa tudo flexível*/
   flex-direction: column; /*Deixa o display flex na vertical em formato de coluna*/
-  align-items: center; /*Alinha horizontalmente*/
-  overflow:hidden; /*Tudo o que vazar da tela vai ficar invisível*/
+  align-items: center; /* Centraliza verticalmente */
+  z-index: 1000;  /*Deixa ela em cima de todos os outros elementos*/
 }
 
 #menu-sidebar{ /*Macaco*/
@@ -26,31 +30,101 @@
   padding: 20px 0; /*Espaço para nada ficar encostando no macaco*/
   flex-shrink: 0; /*Faz com que os outros itens não encolham o macaco caso a resolução mude*/
   display: flex; /*Um tipo de display que deixa tudo flexível*/
-  align-items: center; /*Alinha horizontalmente*/
-  justify-content: center; /*Alinha verticalmente, esse e o de cima são uma dupla dinâmica*/
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
 }
 
-menu{ /*Itens da sidebar*/
+#sidebar menu{ /*Itens da sidebar*/
   width:100%; /*Largura dos botões da sidebar, todos estão ocupando 100% da largura da sidebar*/
   overflow-y:scroll; /*Ativa um scroll para descer pela sidebar caso a tela seja muito pequena*/
   display: flex; /*Um tipo de display que deixa tudo flexível*/
   flex-direction: column; /*Deixa o display flex na vertical em formato de coluna*/
-
   scrollbar-width: none; /* Esconder a barra de rolagem no Firefox */
   -ms-overflow-style: none; /* Esconder a barra de rolagem no Chrome, Edge e Safari */
 }
-menu{
+#sidebar menu{
   ::-webkit-scrollbar {
   display: none; /* Esconder a barra de rolagem no WebKit (Chrome, Safari) */
 }
 }
 
-li{ /*Item da sidebar*/
+#sidebar li{ /*Item da sidebar*/
   list-style: none; /*Tira os pontinhos feios que as listas HTML tem por padrão*/
   margin-bottom: 50px; /*Distância entre os itens*/
+  height:50px;
 }
 
 .current-page{
   border-left: 5px solid #4e00a6; /*Coloca uma bordinha no canto esquerdo do botão correspondente à página em que o usuário está*/
   margin-right:5px; /*Empurra o item que tem a bordinha um pouco para a esquerda para ele não ficar torto*/
+}
+
+.barra-topo{
+  position:absolute; /*Não é influenciado por outros elementos*/
+  top:0; /*Colado no topo*/
+  height:100px; /*Altura*/
+  width: 100%; /*Largura*/
+  border-bottom: 1px solid #D9D9D9; /*Coloca uma linha em baixo*/
+  z-index: 0; /*Deixa ele embaixo da sidebar*/
+  display: flex; /*Um tipo de display que deixa tudo flexível*/
+  align-items: center; /* Centraliza verticalmente */
+}
+.titulo-schelp{ /*Título SCHELP no topo do site*/
+  color:#9231ff; /*Pinta ele*/
+  margin-left:100px; /*Move para a direita para sair debaixo da sidebar*/
+  font-size:3.5rem; /*Muda o tamanho da fonte*/
+}
+
+
+#foto-perfil{ /*Foto do perfil na sidebar*/
+  width: 60px; /* Largura*/
+  height: 60px; /*Altura*/
+  border-radius: 50%; /*Deixa redondo*/
+  object-fit: cover; /*Evita a perca de qualidade da imagem por conta do redimensionamento forçado/
+  padding: 20px 0; /*Espaço para nada ficar encostando na foto de perfil*/
+  flex-shrink: 0; /*Faz com que os outros itens não encolham a foto de perfil caso a resolução mude*/
+  display: flex; /*Um tipo de display que deixa tudo flexível*/
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+}
+
+.dropdown-perfil{ /*Div do dropdown*/
+  display: grid; /*Deixa ela em grade para dar certo*/
+}
+
+.menu-dropdown-perfil a{ /*Todos os textos do dropdown*/
+  text-decoration: none; /*Tira a decoração deles*/
+  color:white; /*Pinta de branco*/
+  font-family:Verdana, Geneva, Tahoma, sans-serif; /*Altera a fonte*/
+  font-weight: 550; /*Altera a grossura da fonte*/
+}
+
+#perfil-dropdown-top, #perfil-dropdown-bottom{ /*Parte de cima e de baixo do dropdown, respectivamente*/
+  flex: 1; /* Divide igualmente o espaço (50% cada um) */
+  width:100%; /*Ocupa toda a largura do dropdown*/
+  display: flex; /*Um tipo de display que deixa tudo flexível*/
+  transition: .5s ease; /*Transição para ficar bonitinho*/
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+}
+#perfil-dropdown-top:hover, #perfil-dropdown-bottom:hover{ /*Quando passarem o mouse em cima*/
+  background-color:#301f44; /*Muda a cor do fundo*/
+}
+
+
+.menu-dropdown-perfil{ /*Corpo do dropdown*/
+  width:175px; /*Largura*/
+  overflow: hidden; /*Esconde tudo o que sair para fora do dropdown*/
+  display: flex; /*Um tipo de display que deixa tudo flexível*/
+  flex-direction: column; /*Deixa o layout na vertical, em coluna*/
+  position:absolute; /*Posição absoluta, outros itens não empurrarão esse*/
+  margin-top:-55px;
+  margin-left:80px; /*Distância do lado esquerdo da tela*/
+  padding-inline: 1px; /*Padding de dentro do dropdown*/
+  height:120px; /*Altura*/
+  background-color: #422e59; /*Cor do fundo*/
+  border-radius:5px; /*Arredondamento das bordas*/
+  display:none; /*Deixa o dropdown invisível*/
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
 }
