@@ -95,7 +95,7 @@ h1{
 .menu-dropdown-perfil a{ /*Todos os textos do dropdown*/
   text-decoration: none; /*Tira a decoração deles*/
   color:white; /*Pinta de branco*/
-  font-family:Verdana, Geneva, Tahoma, sans-serif; /*Altera a fonte*/
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;/*Altera a fonte*/
   font-weight: 550; /*Altera a grossura da fonte*/
 }
 
@@ -122,8 +122,12 @@ h1{
   margin-left:80px; /*Distância do lado esquerdo da tela*/
   padding-inline: 1px; /*Padding de dentro do dropdown*/
   height:120px; /*Altura*/
-  background-color: #422e59; /*Cor do fundo*/
-  border-radius:5px; /*Arredondamento das bordas*/
+  background: rgba(66, 46, 89, .9); /*Cor do fundo*/
+  border-radius: 16px; /*Arredondamento dos cantos*/
+  box-shadow: 0 4px 30px rgba(0, 0, 0, .1);/*Sombrinha para ficar bonitinho*/
+  backdrop-filter: blur(3.5px); /*Blur para dar um efeito no que está no fundo*/
+  -webkit-backdrop-filter: blur(3.5px); /*Complemento do blur acima*/
+  border: 1px solid rgba(66, 46, 89, 1); /*Borda*/
   display:none; /*Deixa o dropdown invisível*/
   align-items: center; /* Centraliza verticalmente */
   justify-content: center; /* Centraliza horizontalmente */
