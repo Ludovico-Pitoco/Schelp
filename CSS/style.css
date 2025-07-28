@@ -132,3 +132,86 @@ h1{
   align-items: center; /* Centraliza verticalmente */
   justify-content: center; /* Centraliza horizontalmente */
 }
+
+
+/*Configurações*/
+.menu-configuracoes{
+  margin-left: 90px; /*Distância do lado esquerdo da tela*/
+  margin-top: 100px; /*Distância do topo da tela*/
+  padding-top: 50px;
+  position: fixed; /*Fixa o menu de configurações na tela*/
+  width: 200px; /*Largura do menu de configurações*/
+  height: 100%; /*Altura do menu de configurações (tela inteira)*/
+  border-right: #D9D9D9 1px solid; /*Coloca uma linha na direita do menu de configurações*/
+  list-style: none; /*Tira os pontinhos feios que as listas HTML tem por padrão*/
+  scrollbar-width: none; /* Esconder a barra de rolagem no Firefox */
+  -ms-overflow-style: none; /* Esconder a barra de rolagem no Chrome, Edge e Safari */
+  scrollbar-width: none; /* Esconder a barra de rolagem no WebKit (Chrome, Safari) */
+}
+
+.li-config{ /*Item de configuração*/
+  list-style: none; /*Tira os pontinhos feios que as listas HTML tem por padrão*/
+  margin-bottom: 2px; /*Distância entre os itens*/
+}
+
+.button-config{ /*Botão de configuração*/
+  text-align: left; /*Alinha o texto à esquerda*/
+  padding: 4px;
+  margin: 0 10px; /*Margem de 0 em cima e em baixo, 10px nas laterais*/
+  width: 90%; /*Largura do botão*/
+  height: 30px; /*Altura do botão*/
+  background-color: white; /*Cor de fundo do botão*/
+  color: white; /*Cor do texto do botão*/
+  border: none; /*Tira a borda do botão*/
+  border-radius: 5px; /*Arredondamento das bordas do botão*/
+  font-family: Verdana, Geneva, Tahoma, sans-serif; /*Fonte do texto do botão*/
+  color: black; /*Cor do texto do botão*/
+}
+
+.ativo-config{ /*Botão de configuração ativo*/
+  text-align: left; /*Alinha o texto à esquerda*/
+  padding: 4px;
+  margin: 0 10px; /*Margem de 0 em cima e em baixo, 10px nas laterais*/
+  width: 90%; /*Largura do botão*/
+  height: 30px; /*Altura do botão*/
+  background-color: #9231FF; /*Cor de fundo do botão*/
+  color: white; /*Cor do texto do botão*/
+  border: none; /*Tira a borda do botão*/
+  border-radius: 5px; /*Arredondamento das bordas do botão*/
+  font-family: Verdana, Geneva, Tahoma, sans-serif; /*Fonte do texto do botão*/
+  color: black; /*Cor do texto do botão*/
+}
+
+.button-config:hover{ /*Quando passar o mouse em cima do botão*/
+  background-color: #9231FF; /*Muda a cor de fundo do botão*/
+  width: calc(100% - 20px); /*Largura do botão (tira o padding)*/
+  border-right: #D9D9D9 1px solid; /*Coloca uma linha na direita do botão*/
+}
+
+.conteudo-configuracoes{ /*Conteúdo das configurações*/
+  display: flex; /*Um tipo de display que deixa tudo flexível*/
+  position: fixed; /*Fixa o conteúdo de configurações na tela*/
+  margin-left: 320px; /*Distância do lado esquerdo da tela*/
+  position: fixed; /*Fixa o conteúdo de configurações na tela*/
+  width: calc(100% - 320px); /*Largura do conteúdo de configurações (tela inteira menos a sidebar)*/
+  margin-top: 130px;
+  overflow-y: auto; /*Ativa um scroll para descer pelo conteúdo caso a tela seja muito pequena*/
+  flex-direction: column; /*Deixa o display flex na vertical em formato de coluna*/
+}
+
+.sa{
+  display: flex; /*Um tipo de display que deixa tudo flexível*/
+  position: fixed; /*Fixa o conteúdo de configurações na tela*/
+  margin-top: 50px;
+}
+
+.titulo-configuracoes{ /*Título das configurações*/
+  display: flex; /*Um tipo de display que deixa tudo flexível*/
+  position: fixed; /*Fixa o título de configurações na tela*/ 
+  width: 100%; /*Largura do título de configurações (tela inteira)*/
+  font-family: Verdana, Geneva, Tahoma, sans-serif; /*Fonte do título*/
+  color: #000000; /*Cor do título*/
+  border-bottom: #D9D9D9 1px solid; /*Coloca uma linha em baixo do título*/ 
+  flex-direction: column; /*Deixa o display flex na vertical em formato de coluna*/
+}
+ 
