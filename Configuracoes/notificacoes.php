@@ -13,7 +13,7 @@ include("../sidebar.php");
     
 <div class="principal"> <!--Div principal, tudo o que tiver na página vem nela-->
 
-<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/style.css?v=<?php echo time(); ?>">
 
 <div class="barra-topo"><h1 class="titulo-schelp">SCHELP<h1></div> <!-- Barra do topo do site-->
 

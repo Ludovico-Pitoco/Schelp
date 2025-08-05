@@ -1,105 +1,110 @@
-body{
-    margin: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif; /*Fonte do texto*/
+body {
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif; /*Fonte do texto*/
 }
 
-.main-login{
-    width: 100vw; /*Largura da tela inteira*/
-    height: 100vh; /*Altura da tela inteira*/
-    display: flex;
-    justify-content: center; /*Centraliza o conteúdo horizontalmente*/
-    align-items: center; /*Centraliza o conteúdo verticalmente*/
-    background: #7800ff;
+.main-login {
+  width: 100vw; /*Largura da tela inteira*/
+  height: 100vh; /*Altura da tela inteira*/
+  display: flex;
+  justify-content: center; /*Centraliza o conteúdo horizontalmente*/
+  align-items: center; /*Centraliza o conteúdo verticalmente*/
+  background-image: linear-gradient(#9231ff, #4e00a6);
 }
 
-.left-login{
-    width: 50vw;
-    height: 100vh; /*Altura da tela inteira*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; 
+.left-login {
+  width: 50vw;
+  height: 100vh; /*Altura da tela inteira*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.left-login > h1{
-    color: rgb(255, 255, 255);
+.left-login > h1 {
+  color: rgb(255, 255, 255);
 }
 
-.right-login{
-    width: 50vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; 
+.right-login {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.card-login{
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 40px 35px;
-    border-radius: 20px;
-    box-shadow: 0 10 40px #4e00a6;
-    background: #9231ff;
+.card-login {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px 35px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px #00000057;
+  background-image: radial-gradient(#9231ff, #662fa5a6);
 }
 
-.card-login > h1{
-    color: rgb(255, 255, 255);
-    margin: 0;
-    font-weight: 800;
+.card-login > h1 {
+  color: rgb(255, 255, 255);
+  margin: 0;
+  font-weight: 800;
 }
 
-.textfield{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
+.textfield {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
 
-.textfield > input{
-    width: 100%;
-    border: none;
-    border-radius: 10px;
-    padding: 15px;
-    background: #ffffff;
-    color: white;
-    font-size: 12pt;
-    box-shadow: 0px 10px 40px #00000056;
-    outline: none;
-    box-sizing: border-box;
+.textfield > input {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  font-size: 12pt;
+  box-shadow: 0px 10px 40px #00000056;
+  outline: none;
+  box-sizing: border-box;
 }
 
-.textfield > label{
-    color: white;
-    margin-bottom: 10px;
+.textfield > label {
+  color: rgb(255, 255, 255);
+  margin-bottom: 10px;
 }
 
-.textfield > input::placeholder{
-    color: #ffffff94;
-    
+.textfield > input::placeholder {
+  color: #00000094;
 }
 
-.btn-login{
-    width: 60%;
-    padding: 16px 0px;
-    margin: 25px;
-    border: none;
-    border-radius: 8px;
-    outline: none;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 3px;
-    color: #ffffff;
-    background: #6E46EB;
-    cursor: pointer;
-    box-shadow: 0px 10px 40px -12px #00000056;
+.btn-login {
+  width: 50%;
+  padding: 16px 0px;
+  margin: 25px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 1000;
+  letter-spacing: 3px;
+  color: #ffffff;
+  background: #6033e9;
+  cursor: pointer;
+  box-shadow: 0 5px 0 #3a12b3;
+  font-size: 1rem;
 }
-
 .btn-login:hover {
-  background: linear-gradient(0deg,#A47CF3,#683FEA);
-  
-  transform: translateY(-2px);
+  background: linear-gradient(0deg, #6033e9, #3a12b3);
+}
+.btn-login:active {
+  box-shadow: 0 0 0 black;
+  transform: translateY(5px);
+}
+
+a {
+  color: white;
 }
