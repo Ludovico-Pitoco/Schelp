@@ -237,3 +237,97 @@ h1 {
   border-bottom: #d9d9d9 1px solid; /*Coloca uma linha em baixo do título*/
   flex-direction: column; /*Deixa o display flex na vertical em formato de coluna*/
 }
+
+.conteudo{
+  margin-left:200px; /*Sai de dentro da sidebar*/
+  margin-top:150px; /*Sai de dentro da barra do topo*/
+}
+
+.botao-criar{
+  display: flex; /*Display flex para alinhar o conteúdo do botão*/
+  width:100px; /*Largura*/
+  height:100px; /*Altura*/
+  border-radius:25%; /*Arredonda as bordas*/
+  outline:none; /*Sem contorno*/
+  border:none; /*Sem borda*/
+  cursor:pointer; /*Mudar ponteiro para "pointer" ao passar o mouse por cima*/
+  background-color:#9231ff; /*Muda a cor do botão*/
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  position:fixed;
+  right:3px;
+  bottom:3px;
+}
+
+.botao{
+  outline:none;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+  background-color:#9231ff;
+  box-shadow: 0 5px 0 #4e00a6;
+  font-family: Koulen;
+  color:white;
+  width:200px;
+  height:40px;
+  font-size:1rem;
+}
+.botao:active{
+  box-shadow: 0 0 0 black;
+  transform: translateY(5px);
+}
+
+input{
+  border:1px solid #9231ff;
+  border-radius:5px;
+}
+::placeholder{
+  color:#9131ff6e;
+  font-family: Koulen;
+  padding:2px;
+}
+
+.container-blocos {
+  display: flex; /*Display flex para alinhar os blocos*/
+  flex-wrap: wrap; /*Faz os blocos quebrarem para a linha de baixo se não houver espaço horizontalmente*/
+  justify-content: center; /*Centraliza os blocos horizontalmente*/
+  gap: 40px; /*Espaço entre eles*/
+}
+
+.blocoequipe {
+  border: 1px solid #9231ff; /*Borda de um bloco*/
+  border-radius: 5px; /*Arredondamento das bordas*/
+  height: 275px; /*Altura*/
+  width: 275px; /*Largura*/
+  box-shadow: 0 8.5px 0 #9231ff; /*Preenchimentozinho embaixo do bloco*/
+  padding: 20px; /*Espaço entre os elementos do bloco*/
+  cursor: pointer; /*Transforma o cursor em ponteiro ao passar por cima do bloco*/
+  transition: transform 0.2s ease; /*Transição para deixar as animações flúidas*/
+}
+
+
+.blocoequipe:hover {
+  transform: scale(1.05); /*Efeito de aumentar ao passar o mouse*/
+}
+
+.logoequipe {
+  background-color: #9231ff; /*Cor de fundo*/
+  border-radius: 10px; /*Arredondamento das bordas*/
+  width: 125px; /*Largura*/
+  height: 125px; /*Altura*/
+  display: flex; /*Display flex para alinhar o ícone svg*/
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  margin: auto; /* Centraliza dentro do bloco */
+}
+
+.tituloequipe {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /*Tipo da Fonte*/
+  color: #9231ff; /*Cor da Fonte*/
+  font-size: 2rem; /*Tamanho da fonte*/
+  text-align: center; /*Alinha os textos no centro*/
+}
+
+a {
+  text-decoration: none; /* Remove o sublinhado dos links */
+}

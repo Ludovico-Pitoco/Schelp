@@ -1,6 +1,6 @@
 create table if not exists equipes(
 	codequipe int primary key AUTO_INCREMENT,
-	nome varchar(80) not null unique
+	nome varchar(80) not null
 );
 
 create table if not exists conta(
