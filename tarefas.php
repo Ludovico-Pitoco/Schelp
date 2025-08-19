@@ -1,4 +1,4 @@
-<?php include("cabecalho.php")?>
+<?php require_once("cabecalho.php")?>
     <title>Schelp - Tarefas</title>
 </head>
 <body onload="pagina_ativa('mandartarefas')"> <!--Inicia a função javascript para marcar para o usuário qual a página em que ele está-->

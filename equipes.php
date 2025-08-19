@@ -1,4 +1,4 @@
-<?php include("cabecalho.php") ?>
+<?php require_once("cabecalho.php")?>
 <link href="CSS/equipes.css" rel="stylesheet">
 <title>Schelp - Equipes</title>
 </head>
