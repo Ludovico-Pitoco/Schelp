@@ -27,17 +27,7 @@ include("../sidebar.php");
             </h2>
         </div>
     </div>
-    <div class="sa">
-        <dl class="cont-config-perfil">
-            <dt>Escolha o tema:</dt>
-            <dd>
-                <select name="tema" id="tema">
-                    <option value="claro">Claro</option>
-                    <option value="escuro">Escuro</option>
-                </select>
-            </dd>
-        </dl>
-    </div>
+   
 </div>
 
 

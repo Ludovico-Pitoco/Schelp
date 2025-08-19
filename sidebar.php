@@ -54,7 +54,7 @@ if (strpos($current_page, "/Configuracoes/") !== false) {
 
       <div class="menu-dropdown-perfil" id="menu-perfil">
         <div id="perfil-dropdown-top"><a href="<?php echo("".$path)?>Configuracoes/geral.php">Configurações</a></div>
-        <div id="perfil-dropdown-bottom"><a href="#">Sair</a></div>
+        <div id="perfil-dropdown-bottom"><a href="<?php echo("".$path)?>logout.php">Sair</a></div>
       </div>
 
     </div>
