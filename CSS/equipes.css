@@ -1,0 +1,333 @@
+* {
+  /*Configurações Básicas da Página*/
+  margin: 0; /*Margem 0*/
+  padding: 0; /*Espaçamento 0*/
+  box-sizing: border-box; /*Especifica o comportamento do "Width" e "Height"*/
+}
+
+h1 {
+  font-family: Koulen;
+}
+
+.principal {
+  display: flex; /*Um tipo de display que deixa tudo flexível*/
+}
+
+#sidebar {
+  /*Sidebar*/
+  height: 100vh; /*Altura da navbar (Tela inteira)*/
+  width: 90px; /*Largura da navbar*/
+  position: fixed; /*Deixa ele sempre na mesma posição, mesmo que o usuário role para baixo*/
+  background-color: #9231ff;
+  transition: 0.5s ease; /*Animaçãozinha para deixar bonitinho*/
+  display: flex; /*Um tipo de display que deixa tudo flexível*/
+  flex-direction: column; /*Deixa o display flex na vertical em formato de coluna*/
+  align-items: center; /* Centraliza verticalmente */
+  z-index: 1000; /*Deixa ela em cima de todos os outros elementos*/
+}
+
+#menu-sidebar {
+  /*Macaco*/
+  fill: transparent; /*Deixar o macaco transparente*/
+  width: 75px; /*Largura do macaco, a altura se ajusta sozinha conforme a largura*/
+  padding: 20px 0; /*Espaço para nada ficar encostando no macaco*/
+  flex-shrink: 0; /*Faz com que os outros itens não encolham o macaco caso a resolução mude*/
+  display: flex; /*Um tipo de display que deixa tudo flexível*/
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+}
+
+#sidebar menu {
+  /*Itens da sidebar*/
+  width: 100%; /*Largura dos botões da sidebar, todos estão ocupando 100% da largura da sidebar*/
+  overflow-y: scroll; /*Ativa um scroll para descer pela sidebar caso a tela seja muito pequena*/
+  display: flex; /*Um tipo de display que deixa tudo flexível*/
+  flex-direction: column; /*Deixa o display flex na vertical em formato de coluna*/
+  scrollbar-width: none; /* Esconder a barra de rolagem no Firefox */
+  -ms-overflow-style: none; /* Esconder a barra de rolagem no Chrome, Edge e Safari */
+}
+#sidebar menu {
+  ::-webkit-scrollbar {
+    display: none; /* Esconder a barra de rolagem no WebKit (Chrome, Safari) */
+  }
+}
+
+#sidebar li {
+  /*Item da sidebar*/
+  list-style: none; /*Tira os pontinhos feios que as listas HTML tem por padrão*/
+  margin-bottom: 50px; /*Distância entre os itens*/
+  height: 50px;
+}
+
+.current-page {
+  border-left: 5px solid #4e00a6; /*Coloca uma bordinha no canto esquerdo do botão correspondente à página em que o usuário está*/
+  margin-right: 5px; /*Empurra o item que tem a bordinha um pouco para a esquerda para ele não ficar torto*/
+}
+
+.barra-topo {
+  position: absolute; /*Não é influenciado por outros elementos*/
+  top: 0; /*Colado no topo*/
+  height: 100px; /*Altura*/
+  width: 100%; /*Largura*/
+  background-color: #ffffff;
+  border-bottom: 1px solid #d9d9d9; /*Coloca uma linha em baixo*/
+  z-index: 10; /*Deixa ele embaixo da sidebar*/
+  display: flex; /*Um tipo de display que deixa tudo flexível*/
+  align-items: center; /* Centraliza verticalmente */
+}
+.titulo-schelp {
+  /*Título SCHELP no topo do site*/
+  color: #9231ff; /*Pinta ele*/
+  margin-left: 100px; /*Move para a direita para sair debaixo da sidebar*/
+  font-size: 3.5rem; /*Muda o tamanho da fonte*/
+}
+
+#foto-perfil {
+  /*Foto do perfil na sidebar*/
+  width: 60px; /* Largura*/
+  height: 60px; /*Altura*/
+  border-radius: 50%; /*Deixa redondo*/
+  object-fit: cover; /*Evita a perca de qualidade da imagem por conta do redimensionamento forçado/
+  padding: 20px 0; /*Espaço para nada ficar encostando na foto de perfil*/
+  flex-shrink: 0; /*Faz com que os outros itens não encolham a foto de perfil caso a resolução mude*/
+  display: flex; /*Um tipo de display que deixa tudo flexível*/
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+}
+
+.dropdown-perfil {
+  /*Div do dropdown*/
+  display: grid; /*Deixa ela em grade para dar certo*/
+}
+
+.menu-dropdown-perfil a {
+  /*Todos os textos do dropdown*/
+  text-decoration: none; /*Tira a decoração deles*/
+  color: white; /*Pinta de branco*/
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /*Altera a fonte*/
+  font-weight: 550; /*Altera a grossura da fonte*/
+}
+
+#perfil-dropdown-top,
+#perfil-dropdown-bottom {
+  /*Parte de cima e de baixo do dropdown, respectivamente*/
+  flex: 1; /* Divide igualmente o espaço (50% cada um) */
+  width: 100%; /*Ocupa toda a largura do dropdown*/
+  display: flex; /*Um tipo de display que deixa tudo flexível*/
+  transition: 0.5s ease; /*Transição para ficar bonitinho*/
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+}
+#perfil-dropdown-top:hover,
+#perfil-dropdown-bottom:hover {
+  /*Quando passarem o mouse em cima*/
+  background-color: #301f44; /*Muda a cor do fundo*/
+}
+
+.menu-dropdown-perfil {
+  /*Corpo do dropdown*/
+  width: 175px; /*Largura*/
+  overflow: hidden; /*Esconde tudo o que sair para fora do dropdown*/
+  display: flex; /*Um tipo de display que deixa tudo flexível*/
+  flex-direction: column; /*Deixa o layout na vertical, em coluna*/
+  position: absolute; /*Posição absoluta, outros itens não empurrarão esse*/
+  margin-top: -55px;
+  margin-left: 80px; /*Distância do lado esquerdo da tela*/
+  padding-inline: 1px; /*Padding de dentro do dropdown*/
+  height: 120px; /*Altura*/
+  background: rgba(66, 46, 89, 0.9); /*Cor do fundo*/
+  border-radius: 16px; /*Arredondamento dos cantos*/
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /*Sombrinha para ficar bonitinho*/
+  backdrop-filter: blur(3.5px); /*Blur para dar um efeito no que está no fundo*/
+  -webkit-backdrop-filter: blur(3.5px); /*Complemento do blur acima*/
+  border: 1px solid rgba(66, 46, 89, 1); /*Borda*/
+  display: none; /*Deixa o dropdown invisível*/
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+}
+
+/*Configurações*/
+.menu-configuracoes {
+  margin-left: 90px; /*Distância do lado esquerdo da tela*/
+  padding-top: 125px;
+  position: fixed; /*Fixa o menu de configurações na tela*/
+  width: 200px; /*Largura do menu de configurações*/
+  height: 100%; /*Altura do menu de configurações (tela inteira)*/
+  border-right: #d9d9d9 1px solid; /*Coloca uma linha na direita do menu de configurações*/
+  list-style: none; /*Tira os pontinhos feios que as listas HTML tem por padrão*/
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  scrollbar-width: none; /* Esconder a barra de rolagem no Firefox */
+  -ms-overflow-style: none; /* Esconder a barra de rolagem no Chrome, Edge e Safari */
+  scrollbar-width: none; /* Esconder a barra de rolagem no WebKit (Chrome, Safari) */
+  z-index: 0;
+}
+
+.li-config {
+  /*Item de configuração*/
+  list-style: none; /*Tira os pontinhos feios que as listas HTML tem por padrão*/
+  margin-bottom: 2px; /*Distância entre os itens*/
+}
+
+.button-config {
+  /*Botão de configuração*/
+  text-align: left; /*Alinha o texto à esquerda*/
+  padding: 4px;
+  margin: 0 10px; /*Margem de 0 em cima e em baixo, 10px nas laterais*/
+  width: 90%; /*Largura do botão*/
+  height: 30px; /*Altura do botão*/
+  background-color: white; /*Cor de fundo do botão*/
+  color: white; /*Cor do texto do botão*/
+  border: none; /*Tira a borda do botão*/
+  border-radius: 5px; /*Arredondamento das bordas do botão*/
+  font-family: Verdana, Geneva, Tahoma, sans-serif; /*Fonte do texto do botão*/
+  color: black; /*Cor do texto do botão*/
+}
+
+.ativo-config {
+  /*Botão de configuração ativo*/
+  text-align: left; /*Alinha o texto à esquerda*/
+  padding: 4px;
+  margin: 0 10px; /*Margem de 0 em cima e em baixo, 10px nas laterais*/
+  width: 90%; /*Largura do botão*/
+  height: 30px; /*Altura do botão*/
+  background-color: #9231ff; /*Cor de fundo do botão*/
+  color: white; /*Cor do texto do botão*/
+  border: none; /*Tira a borda do botão*/
+  border-radius: 5px; /*Arredondamento das bordas do botão*/
+  font-family: Verdana, Geneva, Tahoma, sans-serif; /*Fonte do texto do botão*/
+  color: black; /*Cor do texto do botão*/
+}
+
+.button-config:hover {
+  /*Quando passar o mouse em cima do botão*/
+  background-color: #9231ff; /*Muda a cor de fundo do botão*/
+  width: calc(100% - 20px); /*Largura do botão (tira o padding)*/
+  border-right: #d9d9d9 1px solid; /*Coloca uma linha na direita do botão*/
+}
+
+.conteudo-configuracoes {
+  /*Conteúdo das configurações*/
+  display: flex; /*Um tipo de display que deixa tudo flexível*/
+  position: fixed; /*Fixa o conteúdo de configurações na tela*/
+  margin-left: 320px; /*Distância do lado esquerdo da tela*/
+  position: fixed; /*Fixa o conteúdo de configurações na tela*/
+  width: calc(
+    100% - 320px
+  ); /*Largura do conteúdo de configurações (tela inteira menos a sidebar)*/
+  margin-top: 130px;
+  overflow-y: auto; /*Ativa um scroll para descer pelo conteúdo caso a tela seja muito pequena*/
+  flex-direction: column; /*Deixa o display flex na vertical em formato de coluna*/
+}
+
+.sa {
+  display: flex; /*Um tipo de display que deixa tudo flexível*/
+  position: fixed; /*Fixa o conteúdo de configurações na tela*/
+  margin-top: 50px;
+}
+
+.titulo-configuracoes {
+  /*Título das configurações*/
+  display: flex; /*Um tipo de display que deixa tudo flexível*/
+  position: fixed; /*Fixa o título de configurações na tela*/
+  width: 100%; /*Largura do título de configurações (tela inteira)*/
+  font-family: Verdana, Geneva, Tahoma, sans-serif; /*Fonte do título*/
+  color: #000000; /*Cor do título*/
+  border-bottom: #d9d9d9 1px solid; /*Coloca uma linha em baixo do título*/
+  flex-direction: column; /*Deixa o display flex na vertical em formato de coluna*/
+}
+
+.conteudo{
+  margin-left:200px; /*Sai de dentro da sidebar*/
+  margin-top:150px; /*Sai de dentro da barra do topo*/
+}
+
+.botao-criar{
+  display: flex; /*Display flex para alinhar o conteúdo do botão*/
+  width:100px; /*Largura*/
+  height:100px; /*Altura*/
+  border-radius:25%; /*Arredonda as bordas*/
+  outline:none; /*Sem contorno*/
+  border:none; /*Sem borda*/
+  cursor:pointer; /*Mudar ponteiro para "pointer" ao passar o mouse por cima*/
+  background-color:#9231ff; /*Muda a cor do botão*/
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  position:fixed;
+  right:3px;
+  bottom:3px;
+}
+
+.botao{
+  outline:none;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+  background-color:#9231ff;
+  box-shadow: 0 5px 0 #4e00a6;
+  font-family: Koulen;
+  color:white;
+  width:200px;
+  height:40px;
+  font-size:1rem;
+}
+.botao:active{
+  box-shadow: 0 0 0 black;
+  transform: translateY(5px);
+}
+
+input{
+  border:1px solid #9231ff;
+  border-radius:5px;
+}
+::placeholder{
+  color:#9131ff6e;
+  font-family: Koulen;
+  padding:2px;
+}
+
+.container-blocos {
+  display: flex; /*Display flex para alinhar os blocos*/
+  flex-wrap: wrap; /*Faz os blocos quebrarem para a linha de baixo se não houver espaço horizontalmente*/
+  justify-content: center; /*Centraliza os blocos horizontalmente*/
+  gap: 40px; /*Espaço entre eles*/
+}
+
+.blocoequipe {
+  border: 1px solid #9231ff; /*Borda de um bloco*/
+  border-radius: 5px; /*Arredondamento das bordas*/
+  height: 275px; /*Altura*/
+  width: 275px; /*Largura*/
+  box-shadow: 0 8.5px 0 #9231ff; /*Preenchimentozinho embaixo do bloco*/
+  padding: 20px; /*Espaço entre os elementos do bloco*/
+  cursor: pointer; /*Transforma o cursor em ponteiro ao passar por cima do bloco*/
+  transition: transform 0.2s ease; /*Transição para deixar as animações flúidas*/
+}
+
+
+.blocoequipe:hover {
+  transform: scale(1.05); /*Efeito de aumentar ao passar o mouse*/
+}
+
+.logoequipe {
+  background-color: #9231ff; /*Cor de fundo*/
+  border-radius: 10px; /*Arredondamento das bordas*/
+  width: 125px; /*Largura*/
+  height: 125px; /*Altura*/
+  display: flex; /*Display flex para alinhar o ícone svg*/
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  margin: auto; /* Centraliza dentro do bloco */
+}
+
+.tituloequipe {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /*Tipo da Fonte*/
+  color: #9231ff; /*Cor da Fonte*/
+  font-size: 2rem; /*Tamanho da fonte*/
+  text-align: center; /*Alinha os textos no centro*/
+}
+
+a {
+  text-decoration: none; /* Remove o sublinhado dos links */
+}
