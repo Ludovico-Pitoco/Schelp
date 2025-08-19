@@ -1,4 +1,5 @@
 <?php include("cabecalho.php") ?>
+<link href="CSS/equipes.css" rel="stylesheet">
 <title>Schelp - Equipes</title>
 </head>
 <body onload="pagina_ativa('mandarequipes')">
