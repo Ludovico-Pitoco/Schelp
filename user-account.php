@@ -64,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['signin'])) {
 
     if (!empty($errors)) {
         $_SESSION['errors'] = $errors;
-        header('Location: login.php');
+        header('Location: index.php');
         exit();
     }
 
@@ -86,7 +86,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['signin'])) {
     } else {
         $errors['login'] = 'Email ou senha inválidos';
         $_SESSION['errors'] = $errors;
-        header('Location: login.php');
+        header('Location: index.php');
         exit();
     }
 }

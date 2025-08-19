@@ -12,37 +12,24 @@ if (isset($_SESSION['errors'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Criar Conta</title>
-    <link rel="stylesheet" href="css/Login.css">
+    <title>Schelp - Login</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/Login.css">
 </head>
 
 <body>
-    <div class="container" id="signup">
-        <h1 class="form-title">Criar Conta</h1>
+    <div class="container" id="signIn">
+        <h1 class="form-title">Fazer Login</h1>
 
+        <!-- Mensagem de erro geral -->
         <?php
-        if (isset($errors['user_exist'])) {
-            echo '<div class="error-main">
-                    <p>' . $errors['user_exist'] . '</p>
-                  </div>';
-            unset($errors['user_exist']);
+        if (isset($errors['login'])) {
+            echo '<div class="error-main"><p>' . $errors['login'] . '</p></div>';
+            unset($errors['login']);
         }
         ?>
 
         <form method="POST" action="user-account.php">
-            <!-- Nome -->
-            <div class="input-group">
-                <i class="fas fa-user"></i>
-                <input type="text" name="name" id="name" placeholder="Nome" required>
-                <?php
-                if (isset($errors['name'])) {
-                    echo '<div class="error"><p>' . $errors['name'] . '</p></div>';
-                    unset($errors['name']);
-                }
-                ?>
-            </div>
-
             <!-- Email -->
             <div class="input-group">
                 <i class="fas fa-envelope"></i>
@@ -68,23 +55,15 @@ if (isset($_SESSION['errors'])) {
                 ?>
             </div>
 
-            <!-- Confirma Senha -->
-            <div class="input-group">
-                <i class="fas fa-lock"></i>
-                <input type="password" name="confirm_password" placeholder="Confirma Senha" required>
-                <?php
-                if (isset($errors['confirm_password'])) {
-                    echo '<div class="error"><p>' . $errors['confirm_password'] . '</p></div>';
-                    unset($errors['confirm_password']);
-                }
-                ?>
-            </div>
+            <p class="recover">
+                <a href="#">Recuperar Senha</a>
+            </p>
 
-            <input type="submit" class="btn" value="Registrar" name="signup">
+            <input type="submit" class="btn" value="Login" name="signin">
         </form>
 
         <div class="links">
-            <a href="index.php">Login</a>
+            <a href="register.php">Criar Conta</a>
         </div>
     </div>
 
