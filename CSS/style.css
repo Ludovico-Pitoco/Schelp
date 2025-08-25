@@ -78,7 +78,7 @@ h1 {
 .titulo-schelp {
   /*Título SCHELP no topo do site*/
   color: #9231ff; /*Pinta ele*/
-  margin-left: 100px; /*Move para a direita para sair debaixo da sidebar*/
+  margin-left: 130px; /*Move para a direita para sair debaixo da sidebar*/
   font-size: 3.5rem; /*Muda o tamanho da fonte*/
 }
 
@@ -148,8 +148,8 @@ h1 {
 
 /*Configurações*/
 .menu-configuracoes {
-  margin-left:100px; /*Sai de dentro da sidebar*/
-  margin-top:150px; /*Sai de dentro da barra do topo*/
+  margin-left: 100px; /*Sai de dentro da sidebar*/
+  margin-top: 150px; /*Sai de dentro da barra do topo*/
   position: fixed; /*Fixa o menu de configurações na tela*/
   width: 200px; /*Largura do menu de configurações*/
   height: 100%; /*Altura do menu de configurações (tela inteira)*/
@@ -238,50 +238,48 @@ h1 {
   flex-direction: column; /*Deixa o display flex na vertical em formato de coluna*/
 }
 
-
-
-.botao-criar{
+.botao-criar {
   display: flex; /*Display flex para alinhar o conteúdo do botão*/
-  width:100px; /*Largura*/
-  height:100px; /*Altura*/
-  border-radius:25%; /*Arredonda as bordas*/
-  outline:none; /*Sem contorno*/
-  border:none; /*Sem borda*/
-  cursor:pointer; /*Mudar ponteiro para "pointer" ao passar o mouse por cima*/
-  background-color:#9231ff; /*Muda a cor do botão*/
+  width: 100px; /*Largura*/
+  height: 100px; /*Altura*/
+  border-radius: 25%; /*Arredonda as bordas*/
+  outline: none; /*Sem contorno*/
+  border: none; /*Sem borda*/
+  cursor: pointer; /*Mudar ponteiro para "pointer" ao passar o mouse por cima*/
+  background-color: #9231ff; /*Muda a cor do botão*/
   align-items: center; /* Centraliza verticalmente */
   justify-content: center; /* Centraliza horizontalmente */
-  position:fixed;
-  right:3px;
-  bottom:3px;
+  position: fixed;
+  right: 3px;
+  bottom: 3px;
 }
 
-.botao{
-  outline:none;
-  border:none;
-  border-radius:5px;
-  cursor:pointer;
-  background-color:#9231ff;
+.botao {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #9231ff;
   box-shadow: 0 5px 0 #4e00a6;
   font-family: Koulen;
-  color:white;
-  width:200px;
-  height:40px;
-  font-size:1rem;
+  color: white;
+  width: 200px;
+  height: 40px;
+  font-size: 1rem;
 }
-.botao:active{
+.botao:active {
   box-shadow: 0 0 0 black;
   transform: translateY(5px);
 }
 
-input{
-  border:1px solid #9231ff;
-  border-radius:5px;
+input {
+  border: 1px solid #9231ff;
+  border-radius: 5px;
 }
-::placeholder{
-  color:#9131ff6e;
+::placeholder {
+  color: #9131ff6e;
   font-family: Koulen;
-  padding:2px;
+  padding: 2px;
 }
 
 .container-blocos {
@@ -302,7 +300,6 @@ input{
   transition: transform 0.2s ease; /*Transição para deixar as animações flúidas*/
 }
 
-
 .blocoequipe:hover {
   transform: scale(1.05); /*Efeito de aumentar ao passar o mouse*/
 }
@@ -319,7 +316,7 @@ input{
 }
 
 .tituloequipe {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /*Tipo da Fonte*/
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif; /*Tipo da Fonte*/
   color: #9231ff; /*Cor da Fonte*/
   font-size: 2rem; /*Tamanho da fonte*/
   text-align: center; /*Alinha os textos no centro*/
