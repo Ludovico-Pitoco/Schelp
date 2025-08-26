@@ -1,12 +1,11 @@
 .conteudo {
   margin-top: 200px;
-  margin-left: 25%;
+  margin-left: 32%;
+  margin-right: 25%;
 }
 .mensagem {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
-  position: absolute;
-  left: 610px;
 }
 .nomedousuario {
   animation: mudarCor 5s infinite;
