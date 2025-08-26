@@ -2,13 +2,22 @@
   margin-top: 200px;
   margin-left: 32%;
   margin-right: 25%;
+  text-align: center;
 }
+
 .mensagem {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
 }
+
 .nomedousuario {
   animation: mudarCor 5s infinite;
+}
+
+.mascote {
+  position: absolute;
+  bottom: 0;
+  left: 12%;
 }
 
 @keyframes mudarCor {

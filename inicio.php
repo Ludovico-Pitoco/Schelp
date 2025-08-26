@@ -14,9 +14,10 @@
 
 <h1 class="mensagem">Olá <span class="nomedousuario"><?php echo htmlspecialchars($usuario['nome']); ?></span>, seja bem-vindo ao Schelp!</h1>
 
-</div>
+<img class="mascote" src="arquivos/imagens/imagem/picasso.png">
 
 </div>
 
+</div>
 </body>
 </html>
