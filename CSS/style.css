@@ -98,6 +98,8 @@ h1 {
 .dropdown-perfil {
   /*Div do dropdown*/
   display: grid; /*Deixa ela em grade para dar certo*/
+  position: absolute;
+  bottom: 5%;
 }
 
 .menu-dropdown-perfil a {
