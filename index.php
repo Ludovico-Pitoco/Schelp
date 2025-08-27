@@ -1,9 +1,22 @@
 <?php
 session_start();
+
+error_reporting(0);       // Não reporta nenhum erro
+ini_set('display_errors', 0); // Não exibe erros na tela
+
 $errors = [];
+
 if (isset($_SESSION['errors'])) {
     $errors = $_SESSION['errors'];
 }
+
+// Verifica se há usuário logado
+if (($_SESSION['user'])) {
+    // Se não houver, redireciona para a página de login
+    header('Location: inicio.php');
+    exit();
+}
+
 ?>
 
 <!DOCTYPE html>
