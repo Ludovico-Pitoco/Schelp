@@ -3,7 +3,7 @@ $nomeequipe = $_POST['nomeequipe'];
 
 $sql = "insert into equipes(nome) values('{$nomeequipe}')";
 
-include_once('conexao.php');
+include_once('conexaonormal.php');
 
 if( mysqli_query($conexao, $sql))
 {
