@@ -1,5 +1,5 @@
-<?php require_once("cabecalho.php")?>
-<link rel="stylesheet" href="CSS/equipes.css?v=<?php echo time(); ?>">
+<?php include("cabecalho.php") ?>
+<link href="CSS/equipes.css" rel="stylesheet">
 <title>Schelp - Equipes</title>
 </head>
 <body onload="pagina_ativa('mandarequipes')">

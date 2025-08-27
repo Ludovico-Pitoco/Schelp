@@ -1,17 +1,3 @@
-<?php
-session_start();
-
-// Verifica se há usuário logado
-if (!isset($_SESSION['user'])) {
-    // Se não houver, redireciona para a página de login
-    header('Location: index.php');
-    exit();
-}
-
-// Se chegou aqui, significa que o usuário está logado
-$usuario = $_SESSION['user']; // Pega os dados do usuário
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

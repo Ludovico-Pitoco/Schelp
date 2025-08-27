@@ -39,7 +39,7 @@
     <li class="li-config">
       <a href="acessibilidade.php">
         <button class="<?= basename($_SERVER['PHP_SELF']) == 'acessibilidade.php' ? 'ativo-config' : 'button-config' ?>" id="button-config">
-          <img width="24" height="24"  src="../arquivos/imagens/icon/p-a.svg" alt="">
+          <img width="24" height="24"  src="../arquivos/imagens/p-a.svg" alt="">
           </g>
         </svg>
           Acessibilidade
@@ -73,7 +73,7 @@
     <li class="li-config">
       <a href="feedback.php">
         <button class="<?= basename($_SERVER['PHP_SELF']) == 'feedback.php' ? 'ativo-config' : 'button-config' ?>" id="button-config">
-          <img width="23" height="23" src="../arquivos/imagens/icon/p-f.svg" alt="">
+          <img width="23" height="23" src="../arquivos/imagens/p-f.svg" alt="">
           Feedback
         </button>
       </a>

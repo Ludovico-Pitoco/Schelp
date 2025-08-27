@@ -1,5 +1,4 @@
-<?php require_once("cabecalho.php")?>
-<link rel="stylesheet" href="CSS/inicio.css?v=<?php echo time(); ?>">
+<?php include("cabecalho.php")?>
     <title>Schelp - Início</title>
 </head>
 <body onload="pagina_ativa('mandarinicio')"> <!--Inicia a função javascript para marcar para o usuário qual a página em que ele está-->
@@ -12,12 +11,11 @@
 
 <div class="conteudo"> <!--Conteúdo do site-->
 
-<h1 class="mensagem">Olá <span class="nomedousuario"><?php echo htmlspecialchars($usuario['nome']); ?></span>, seja bem-vindo ao Schelp!</h1>
 
-<img class="mascote" src="arquivos/imagens/imagem/picasso.png">
 
 </div>
 
 </div>
+
 </body>
 </html>
