@@ -76,19 +76,6 @@ h1 {
   align-items: center; /* Centraliza verticalmente */
 }
 
-#foto-perfil {
-  /*Foto do perfil na sidebar*/
-  width: 60px; /* Largura*/
-  height: 60px; /*Altura*/
-  border-radius: 50%; /*Deixa redondo*/
-  object-fit: cover; /*Evita a perca de qualidade da imagem por conta do redimensionamento forçado/
-  padding: 20px 0; /*Espaço para nada ficar encostando na foto de perfil*/
-  flex-shrink: 0; /*Faz com que os outros itens não encolham a foto de perfil caso a resolução mude*/
-  display: flex; /*Um tipo de display que deixa tudo flexível*/
-  align-items: center; /* Centraliza verticalmente */
-  justify-content: center; /* Centraliza horizontalmente */
-}
-
 .dropdown-perfil {
   /*Div do dropdown*/
   display: grid; /*Deixa ela em grade para dar certo*/

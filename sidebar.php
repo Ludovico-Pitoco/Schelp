@@ -45,8 +45,10 @@ if (strpos($current_page, "/Configuracoes/") !== false) {
         </svg><br><br> <!--Ícone de configurações-->
       </a>
     </li>
-  </menu>
-
+    <li></li>
+    <li></li>
+    <li></li>
+    <li>
     <div class="dropdown-perfil">
 
       <a id="dropdown-perfil-ativar" onclick="alternarDropdown(); return false;" href="#">
@@ -58,7 +60,8 @@ if (strpos($current_page, "/Configuracoes/") !== false) {
       </div>
 
     </div>
-
+    </li>
+  </menu>
   </div>
 
   <?php require_once("rodape.php")?>
