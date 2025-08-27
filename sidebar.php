@@ -61,3 +61,5 @@ if (strpos($current_page, "/Configuracoes/") !== false) {
 
   </div>
 
+  <?php require_once("rodape.php")?>
+

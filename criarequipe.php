@@ -1,5 +1,5 @@
-<?php include("cabecalho.php")?>
-<link href="CSS/equipes.css" rel="stylesheet">
+<?php require_once("cabecalho.php")?>
+<link rel="stylesheet" href="CSS/equipes.css?v=<?php echo time(); ?>">
     <title>Schelp - Equipes</title>
 </head>
 <body onload="pagina_ativa('mandarequipes')"> <!--Inicia a função javascript para marcar para o usuário qual a página em que ele está-->
@@ -22,5 +22,4 @@ Nome da Equipe: <input name="nomeequipe" type="text" required placeholder="Insir
 
 </div>
 
-</body>
-</html>
+<?php require_once("rodape.php")?>

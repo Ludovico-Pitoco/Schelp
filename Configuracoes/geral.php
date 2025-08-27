@@ -43,5 +43,4 @@ include("../sidebar.php");
 
 </div>
 
-</body>
-</html>
+<?php require_once("rodape.php")?>

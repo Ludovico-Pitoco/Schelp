@@ -89,9 +89,8 @@ if (isset($_SESSION['errors'])) {
     </div>
 
     <script src="script/Login.js"></script>
-</body>
 
-</html>
+<?php require_once("rodape.php")?>
 
 <?php
 if (isset($_SESSION['errors'])) {
