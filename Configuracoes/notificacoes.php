@@ -4,7 +4,7 @@ include("../cabecalho.php");
 include("../sidebar.php");
 ?>
 
-<script src="../script/script.js"></script>
+<script src="../Script/script.js"></script>
 
 
     <title>Schelp - Configurações</title>

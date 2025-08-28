@@ -80,7 +80,7 @@ if (($_SESSION['user'])) {
         </div>
     </div>
 
-    <script src="script/Login.js"></script>
+    <script src="Script/Login.js"></script>
 </body>
 
 </html>

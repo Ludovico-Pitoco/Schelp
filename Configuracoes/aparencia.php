@@ -3,7 +3,7 @@ include("../cabecalho.php");
 include("../sidebar.php");
 ?>
 
-<script src="../script/script.js"></script>
+<script src="../Script/script.js"></script>
 
     <title>Schelp - Configurações</title>
 </head>
@@ -27,7 +27,6 @@ include("../sidebar.php");
             </h2>
         </div>
     </div>
-   
 </div>
 
-<?php require_once("rodape.php")?>
+<?php require_once("../rodape.php")?>

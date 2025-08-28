@@ -23,7 +23,7 @@ $usuario = $_SESSION['user']; // Pega os dados do usuário
     <link rel="stylesheet" href="CSS/style.css?v=<?php echo time(); ?>">
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
-    <script src="script/script.js"></script>
+    <script src="Script/script.js"></script>
 
     <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">

@@ -1,5 +1,5 @@
 
-<script src="script/solucaologout.js"></script>
+<script src="Script/solucaologout.js"></script>
 
 </body>
 </html>
