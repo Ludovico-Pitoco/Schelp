@@ -1,18 +1,36 @@
 <?php
-$nomeequipe = $_POST['nomeequipe'];
+session_start();
 
-$sql = "insert into equipes(nome) values('{$nomeequipe}')";
+if (!isset($_SESSION['user']) || !is_array($_SESSION['user'])) {
+    header("Location: login.php");
+    exit;
+}
+
+$usuario = $_SESSION['user'];
+$codusuario = (int) $usuario['codconta'];
+
+$nomeequipe = $_POST['nomeequipe'];
 
 include_once('conexaonormal.php');
 
-if( mysqli_query($conexao, $sql))
-{
-        header("Location: equipes.php");
+$sql = "INSERT INTO equipes (nome) VALUES ('{$nomeequipe}')";
+
+if (!mysqli_query($conexao, $sql)) {
+    header("Location: criarequipe.php?erro=1");
+    exit;
 }
-else
-{
-        header("Location: criarequipe.php");
-        echo"<p>ERRO</p>";
+
+$codequipe = mysqli_insert_id($conexao);
+
+$consulta = "INSERT INTO equipescontas (codcontafk, codequipefk, datas) 
+             VALUES ('{$codusuario}', '{$codequipe}', NOW())";
+
+if (mysqli_query($conexao, $consulta)) {
+    header("Location: equipes.php");
+    exit;
+} else {
+    header("Location: criarequipe.php?erro=2");
+    exit;
 }
 
 mysqli_close($conexao);

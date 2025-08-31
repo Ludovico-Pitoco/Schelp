@@ -37,7 +37,14 @@ include_once('conexao.php');
 
 try {
     // Preparando a query com PDO
-    $stmt = $pdo->query("SELECT * FROM equipes ORDER BY nome");
+    if (!isset($_SESSION['user']) || !is_array($_SESSION['user'])) {
+    header("Location: login.php");
+    exit;
+}
+$usuario = $_SESSION['user'];
+$codusuario = (int) $usuario['codconta'];
+
+    $stmt = $pdo->query("SELECT * FROM equipes_com_usuario ORDER BY nome_equipe");
     $equipes = $stmt->fetchAll();
     
     echo "<div class='container-blocos'>";
@@ -52,7 +59,7 @@ try {
                     </svg>
                 </div>
                 <br>
-                <p class='tituloequipe'>".$dados['nome']."</p>
+                <p class='tituloequipe'>".$dados['nome_equipe']."</p>
             </div>
         </a>";
     }
@@ -67,4 +74,5 @@ try {
 </div>
 </div>
 
-<?php require_once("rodape.php")?>
+</body>
+</html>
