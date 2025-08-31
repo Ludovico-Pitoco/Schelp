@@ -34,6 +34,7 @@
 
 <?php
 include_once('conexao.php');
+include_once('conexaonormal.php');
 
 try {
     // Preparando a query com PDO
@@ -44,12 +45,12 @@ try {
 $usuario = $_SESSION['user'];
 $codusuario = (int) $usuario['codconta'];
 
-    $stmt = $pdo->query("SELECT * FROM equipes_com_usuario ORDER BY nome_equipe");
-    $equipes = $stmt->fetchAll();
+    $sql = "SELECT * FROM equipes_com_usuario WHERE codconta = $codusuario ORDER BY nome_equipe";
+    $equipes_com_usuario = mysqli_query($conexao, $sql);
     
     echo "<div class='container-blocos'>";
     
-    foreach ($equipes as $dados) {
+    foreach ($equipes_com_usuario as $dados) {
         echo "
         <a href='equipe.php'>
             <div class='blocoequipe'>
