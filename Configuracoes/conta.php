@@ -22,10 +22,14 @@ include("../sidebar.php");
 <div class="conteudo-configuracoes"> <!--Conteúdo específico da página de configurações-->
 
 <div class="titulo-configuracoes">
+
 <h2>
     Conta
 </h2>
+
 </div>
+
+<input type="file" id="imagem-perfil" name="foto" accept=".jpg, .jpeg, .png">
 
 </div>
 

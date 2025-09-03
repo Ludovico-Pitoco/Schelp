@@ -323,3 +323,8 @@ input {
 a {
   text-decoration: none; /* Remove o sublinhado dos links */
 }
+
+#imagem-perfil {
+  margin: 8% 2%;
+  border: none;
+}
