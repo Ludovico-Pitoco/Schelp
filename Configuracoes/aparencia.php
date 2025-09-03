@@ -2,7 +2,7 @@
 include("../cabecalho.php");
 include("../sidebar.php");
 ?>
-
+<link rel="stylesheet" href="../CSS/aparencia.css?v=<?php echo time(); ?>">
 <script src="../Script/script.js"></script>
 
     <title>Schelp - Configurações</title>

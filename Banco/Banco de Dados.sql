@@ -70,3 +70,15 @@ create table if not exists enviartarefa(
     	conteudo varchar(500),
     	arquivo varchar(80) not null unique
 );
+
+CREATE VIEW equipes_com_usuario AS
+SELECT 
+    e.codequipe,
+    e.nome AS nome_equipe,
+    c.codconta,
+    c.nome AS nome_usuario,
+    ec.datas
+FROM equipes e
+JOIN equipescontas ec ON ec.codequipefk = e.codequipe
+JOIN conta c ON ec.codcontafk = c.codconta
+ORDER BY e.nome;
