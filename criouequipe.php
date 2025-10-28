@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+// Verifica se o usuário está logado
 if (!isset($_SESSION['user']) || !is_array($_SESSION['user'])) {
     header("Location: login.php");
     exit;
@@ -9,23 +10,33 @@ if (!isset($_SESSION['user']) || !is_array($_SESSION['user'])) {
 $usuario = $_SESSION['user'];
 $codusuario = (int) $usuario['codconta'];
 
-$nomeequipe = $_POST['nomeequipe'];
+// Verifica se o nome da equipe foi enviado
+if (empty($_POST['nomeequipe'])) {
+    header("Location: criarequipe.php?erro=camponulo");
+    exit;
+}
+
+$nomeequipe = trim($_POST['nomeequipe']);
 
 include_once('conexaonormal.php');
 
-$sql = "INSERT INTO equipes (nome) VALUES ('{$nomeequipe}')";
+// === Inserir equipe de forma segura ===
+$stmt = $conexao->prepare("INSERT INTO equipes (nome) VALUES (?)");
+$stmt->bind_param("s", $nomeequipe);
 
-if (!mysqli_query($conexao, $sql)) {
+if (!$stmt->execute()) {
     header("Location: criarequipe.php?erro=1");
     exit;
 }
 
-$codequipe = mysqli_insert_id($conexao);
+$codequipe = $conexao->insert_id;
+$cargo = 'dono';
 
-$consulta = "INSERT INTO equipescontas (codcontafk, codequipefk, datas) 
-             VALUES ('{$codusuario}', '{$codequipe}', NOW())";
+// === Inserir relação usuário-equipe ===
+$stmt2 = $conexao->prepare("INSERT INTO equipescontas (codcontafk, codequipefk, cargo, datas) VALUES (?, ?, ?, NOW())");
+$stmt2->bind_param("iis", $codusuario, $codequipe, $cargo);
 
-if (mysqli_query($conexao, $consulta)) {
+if ($stmt2->execute()) {
     header("Location: equipes.php");
     exit;
 } else {
@@ -33,5 +44,8 @@ if (mysqli_query($conexao, $consulta)) {
     exit;
 }
 
-mysqli_close($conexao);
+// Fecha conexões
+$stmt->close();
+$stmt2->close();
+$conexao->close();
 ?>
