@@ -84,7 +84,7 @@ h1 {
 
 #foto-perfil {
   /*Foto do perfil na sidebar*/
-  width: 90px; /* Largura*/
+  width: 60px; /* Largura*/
   height: 60px; /*Altura*/
   border-radius: 50%; /*Deixa redondo*/
   object-fit: cover; /*Evita a perca de qualidade da imagem por conta do redimensionamento forçado*/
@@ -328,3 +328,4 @@ a {
   margin: 8% 2%;
   border: none;
 }
+
