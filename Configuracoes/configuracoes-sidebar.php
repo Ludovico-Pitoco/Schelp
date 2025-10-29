@@ -1,6 +1,13 @@
+<link rel="stylesheet" href="../CSS/config-conta.css">
+
 <div>
     <menu class="menu-configuracoes"> <!--Menu de configurações-->
-       
+ 
+    <div class="foto-nome-container">
+        <img class="foto-barra" src="<?php echo $path2; ?>?t=<?php echo time(); ?>" alt="Foto do perfil" style="width:60px;height:60px;border-radius:50%;object-fit:cover;">
+        <label class="nome-barra"><?php echo htmlspecialchars($nome_usuario); ?></label>
+    </div>
+  
     <li class="">
       <a href="geral.php">
         <button class="<?= basename($_SERVER['PHP_SELF']) == 'geral.php' ? 'ativo-config' : 'button-config' ?>" id="button-config">
