@@ -1,0 +1,110 @@
+.foto-file{
+    display: none;
+}
+
+.foto-container {
+    background: #fff;
+    padding: 20px;
+    width: 300px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 70px;
+    position: relative;
+}
+
+.botao-foto {
+  background-color: #f3f7fe;
+  color: #3b82f6;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  width: 25px;
+  height: 40px;
+  transition: 0.3s;
+  margin-bottom: 5px; 
+  display: inline-block;
+  line-height: 45px; 
+  text-align: center;
+  position: absolute;
+  bottom: 225px;
+  left: 190px;
+}
+
+
+.botao-foto:hover {
+  background-color: #3b82f6;
+  box-shadow: 0 0 0 5px #3b83f65f;
+  color: #fff;
+}
+
+
+.salvar-perfil{
+    background-color: #9231FF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 210px;
+    height: 45px;
+    transition: 0.3s;
+    
+   
+    display: inline-block;
+    line-height: 45px; 
+    text-align: center;
+}
+
+
+.input-group {
+ position: relative;
+}
+
+.nome {
+ border: solid 1.5px #8b8b8b;
+ border-radius: 16px !important;
+ background: none;
+ padding: 1rem;
+ font-size: 1rem;
+ color: #000000;
+ transition: border 150ms cubic-bezier(0.4,0,0.4,1);
+ width: 250px;
+ height: 50px;
+}
+
+.user-label {
+ position: absolute;
+ left: 15px;
+ color: #646262;
+ pointer-events: none;
+ transform: translateY(1rem);
+ transition: 150ms cubic-bezier(0.4,0,0.2,1);
+}
+
+.nome:focus, .nome:valid {
+ outline: none;
+ border: 1.5px solid #9231FF;
+}
+
+.nome:focus ~ label, .nome:valid ~ label {
+ transform: translateY(-50%) scale(0.8);
+ background-color: #ffffff;
+ padding: 0 .2em;
+ color: #9231FF;
+}
+
+.foto-nome-container{
+    text-align: center;
+    margin-left: 15px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.nome-barra{
+    padding: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 24px;
+    align-items: center;
+    margin-bottom: 20px;
+    text-decoration: underline #9231FF;
+}
