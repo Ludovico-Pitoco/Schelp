@@ -29,10 +29,8 @@ include("../sidebar.php");
 
 </div>
 
-<input type="file" id="imagem-perfil" name="foto" accept=".jpg, .jpeg, .png">
-
 </div>
 
 </div>
 
-<?php require_once("rodape.php")?>
+<?php require_once("../rodape.php")?>

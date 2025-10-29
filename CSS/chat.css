@@ -1,220 +1,412 @@
 /* ======== Layout Geral ======== */
 body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f6f8;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f6f8;
 }
 
 /* Chat container */
 .chat-container {
-    position: absolute;
-    left: 270px; /* espaço para sidebar */
-    top: 80px;   /* altura da navbar */
-    right: 20px;
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
-    background-color: #fff;
-    border-radius: 10px;
-    overflow: hidden; 
+  position: absolute;
+  left: 4%; /* espaço para sidebar */
+  top: 80px; /* altura da navbar */
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 /* Área das mensagens */
 .chat-messages {
-    flex: 1;
-    overflow-y: auto;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    background-color: #f9fafc;
-    scroll-behavior: smooth;
-    /* Deixa espaço embaixo para não ser cortada pelo formulário */
-    padding-bottom: 100px; 
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #f9fafc;
+  scroll-behavior: smooth;
+  /* Deixa espaço embaixo para não ser cortada pelo formulário */
+  padding-bottom: 100px;
 }
 
 /* Mensagens */
 .message {
-    max-width: 70%;
-    padding: 12px 16px;
-    border-radius: 18px;
-    word-wrap: break-word;
-    font-size: 15px;
+  max-width: 70%;
+  padding: 12px 16px;
+  border-radius: 18px;
+  word-wrap: break-word;
+  font-size: 15px;
 }
 
 /* Mensagens do usuário logado (direita) */
 .message.self {
-    align-self: flex-end;
-    background-color: #7a3cff;
-    color: #fff;
-    border-radius: 18px 18px 0 18px;
-    margin-bottom:20px;
+  margin-top: 20px;
+  align-self: flex-end;
+  background-color: #7a3cff;
+  color: #fff;
+  border-radius: 18px 18px 0 18px;
+  margin-bottom: 20px;
 }
 
 /* Mensagens de outros usuários (esquerda) */
 .message.other {
-    align-self: flex-start;
-    background-color: #e5e5ea;
-    color: #000;
-    border-radius: 18px 18px 18px 0;
+  align-self: flex-start;
+  background-color: #e5e5ea;
+  color: #000;
+  border-radius: 18px 18px 18px 0;
 }
 
 /* Nome do remetente */
 .msg-info {
-    font-size: 14px;
-    color: #ffffff;
-    margin-bottom: 3px;
-    font-weight: bolder;
+  font-size: 14px;
+  color: #ffffff;
+  margin-bottom: 3px;
+  font-weight: bolder;
 }
 
 /* Área de envio */
 .form-mensagem {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 15px;
-    background: white;
-    border-top: 1px solid #ddd;
-    box-sizing: border-box;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  background: white;
+  border-top: 1px solid #ddd;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
 }
 
 /* Textarea */
 .form-mensagem textarea {
-    flex: 1;
-    height: 70px;
-    resize: none;
-    border-radius: 12px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    font-size: 15px;
-    outline: none;
+  flex: 1;
+  height: 70px;
+  resize: none;
+  border-radius: 12px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  outline: none;
 }
 
 /* Botão enviar */
-.form-mensagem button {
-    background-color: #7a3cff;
-    color: white;
-    border: none;
-    border-radius: 12px;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 15px;
+.form-mensagem .send {
+  background-color: #7a3cff;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 15px;
 }
 
-.form-mensagem button:hover {
-    background-color: #642cd1;
+.form-mensagem .send:hover {
+  background-color: #642cd1;
 }
 
 /* Input de arquivo */
 .form-mensagem input[type="file"] {
-    display: none;
+  display: none;
 }
 
 .form-mensagem label {
-    font-size: 22px;
-    cursor: pointer;
-    color: #7a3cff;
+  font-size: 22px;
+  cursor: pointer;
+  color: #7a3cff;
 }
 
 /* Scroll bonito */
 .chat-messages::-webkit-scrollbar {
-    width: 8px;
+  width: 8px;
 }
 
 .chat-messages::-webkit-scrollbar-thumb {
-    background-color: #ccc;
-    border-radius: 10px;
+  background-color: #ccc;
+  border-radius: 10px;
 }
 
 /* ======== Arquivos no chat ======== */
 .msg-img img {
-    max-width: 220px;
-    border-radius: 12px;
-    margin-top: 8px;
-    display: block;
-    box-shadow: 0 0 4px rgba(0,0,0,0.2);
+  max-width: 220px;
+  border-radius: 12px;
+  margin-top: 8px;
+  display: block;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
 .msg-file {
-    margin-top: 8px;
+  margin-top: 8px;
 }
 
 .download-btn {
-    text-decoration: none;
-    color: white;
-    background-color: #7a3cff;
-    padding: 8px 12px;
-    border-radius: 10px;
-    font-size: 14px;
-    transition: 0.2s;
+  text-decoration: none;
+  color: white;
+  background-color: #7a3cff;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  transition: 0.2s;
 }
 
 .download-btn:hover {
-    background-color: #642cd1;
+  background-color: #642cd1;
 }
 
 /* Para mensagens com imagens, manter bolha proporcional */
 .message img {
-    max-height: 300px;
-    object-fit: cover;
+  max-height: 300px;
+  object-fit: cover;
 }
 
 /* ======= Preview de arquivos ======= */
 .preview-container {
-    position: absolute;
-    bottom: 90px; /* acima do campo de digitar */
-    left: 0;
-    width: 100%;
-    padding: 10px 15px;
-    display: flex;
-    gap: 10px;
-    overflow-x: auto;
-    background: #fff;
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #eee;
-    box-sizing: border-box;
+  position: absolute;
+  bottom: 90px; /* acima do campo de digitar */
+  left: 0;
+  width: 100%;
+  padding: 10px 15px;
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  background: #fff;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #eee;
+  box-sizing: border-box;
 }
 
 .preview-img {
-    height: 80px;
-    border-radius: 10px;
-    object-fit: cover;
-    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  height: 80px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 .preview-file {
-    padding: 10px 15px;
-    background: #f0f0f0;
-    border-radius: 10px;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
+  padding: 10px 15px;
+  background: #f0f0f0;
+  border-radius: 10px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
 }
 
 .chat-arquivo {
-    border: 1px solid #5128ac;
-    padding: 8px 10px;
-    border-radius: 12px;
-    background-color: #602eca;
-    display: inline-block;
-    max-width: 250px;
-    word-break: break-word;
-    margin-top: 5px;
+  border: 1px solid #5128ac;
+  padding: 8px 10px;
+  border-radius: 12px;
+  background-color: #602eca;
+  display: inline-block;
+  max-width: 250px;
+  word-break: break-word;
+  margin-top: 5px;
 }
 
 .chat-arquivo a {
-    display: block;
-    font-size: 13px;
-    color: #ffe882;
-    text-decoration: none;
-    margin-top: 3px;
+  display: block;
+  font-size: 13px;
+  color: #ffe882;
+  text-decoration: none;
+  margin-top: 3px;
 }
 
 .chat-arquivo a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
+
+/* Modal de pesquisa */
+.modal-pesquisa {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 800px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#campoBusca {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#resultadosBusca {
+  max-height: 150px;
+  overflow-y: auto;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+.resultado-item {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.resultado-item:last-child {
+  border-bottom: none;
+}
+
+/* Botão de ação principal (ex: enviar, adicionar, etc.) */
+#fecharModal {
+  background: linear-gradient(135deg, #7a3cff, #7a3cff);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  margin-left: 5px;
+}
+
+/* Efeito ao passar o mouse */
+#fecharModal:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #7a3cff, #7a3cff);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+/* Efeito ao clicar */
+#fecharModal:active {
+  transform: scale(0.97);
+  background: linear-gradient(135deg, #7a3cff, #7a3cff);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.btn-notificar {
+  background: linear-gradient(135deg, #7a3cff, #7a3cff);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  margin-left: 5px;
+}
+
+/* Efeito ao passar o mouse */
+.btn-notificar:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #7a3cff, #7a3cff);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+/* Efeito ao clicar */
+.btn-notificar:active {
+  transform: scale(0.97);
+  background: linear-gradient(135deg, #7a3cff, #7a3cff);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+#anexo {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+#anexo:hover {
+  transform: scale(1.1);
+}
+
+/* === NAVBAR DA EQUIPE === */
+.navbar-equipe {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #9231ff; /* mesmo roxo da sidebar */
+  color: #fff;
+  padding: 10px 2%;
+  height: 70px;
+  position: sticky;
+  top: 2%;
+  z-index: 10;
+  border-bottom: 2px solid #6620c4;
+  border-top-left-radius: 12px;
+}
+
+.navbar-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nome-equipe {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+
+.navbar-acoes {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-navbar {
+  background-color: #9131ff00;
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+  padding: 6px 20px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  font-size: 1.1rem;
+}
+
+.btn-navbar:hover {
+  transform: scale(1.3);
+}
+
+.btn-navbar-sair {
+  border: none;
+  background-color: #9231ff;
+  color: white;
+  font-size: x-large;
+  border-radius: 10px;
+  padding: 6px 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.btn-navbar-sair:hover{
+  transform: scale(1.3);
+}
+
+.nome-equipe {
+  font-size: 1.8rem;
+  color: white;
+  font-weight: 600;
+}
+
+.btn-voltar{
+  color: inherit;
+}
+

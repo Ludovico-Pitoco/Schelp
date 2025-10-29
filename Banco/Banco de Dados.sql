@@ -14,6 +14,7 @@ create table if not exists conta(
 CREATE TABLE IF NOT EXISTS equipescontas (
     codcontafk int not null,
     codequipefk int not null,
+	cargo varchar(80) not null,
     datas datetime not null,
     PRIMARY KEY (codcontafk, codequipefk),
     FOREIGN KEY (codcontafk) REFERENCES conta(codconta),
