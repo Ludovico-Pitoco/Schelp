@@ -215,7 +215,7 @@ h1 {
     100% - 320px
   ); /*Largura do conteúdo de configurações (tela inteira menos a sidebar)*/
   margin-top: 130px;
-  overflow-y: auto; /*Ativa um scroll para descer pelo conteúdo caso a tela seja muito pequena*/
+  overflow-y: visible; /*Ativa um scroll para descer pelo conteúdo caso a tela seja muito pequena*/
   flex-direction: column; /*Deixa o display flex na vertical em formato de coluna*/
 }
 
@@ -328,4 +328,5 @@ a {
   margin: 8% 2%;
   border: none;
 }
+
 
