@@ -27,6 +27,7 @@ if (!$usuario) {
 ?>
 
 <script src="../Script/script.js"></script>
+
 <link rel="stylesheet" href="../CSS/config-conta.css">
 <title>Schelp - Configurações</title>
 </head>
@@ -46,31 +47,67 @@ if (!$usuario) {
     <h2>Conta</h2>
 </div>
 
-<div class="foto-container">
+<div class="perfil-container">
    
     <img src="<?php echo $path2; ?>?t=<?php echo time(); ?>" alt="Foto do perfil" style="width:120px;height:120px;border-radius:50%;object-fit:cover;border:3px solid #9231FF;"><br><br>
-   <form action="atualizar_perfil.php" method="POST" enctype="multipart/form-data">
+   <form id="form-perfil" action="atualizar_perfil.php" method="POST" enctype="multipart/form-data">
 
     <input type="hidden" name="codconta" value="<?php echo htmlspecialchars($usuario['codconta']); ?>">
 
-    <label for="foto-file" class="botao-foto">✏️</label>
+    <label for="foto-file" data-tooltip="Editar Foto de perfil!" class="botao-foto">✏️</label>
     <input id="foto-file" type="file" class="foto-file" name="foto" accept="image/png, image/jpeg, image/gif">
-    
+
     <br>
 
-    <div class="input-group">
-    <input class="nome"  type="text" name="novo_nome" autocomplete="off" class="input" id="novo-nome">
-    <label class="user-label">Alterar Nome</label>
+    <div class="nome-group">
+    <input class="nome"  type="text" name="novo_nome" autocomplete="off" class="input" id="novo-nome" placeholder="">
+    <label class="nome-label">Alterar Nome</label>
     </div>
 
     <br><br>
     <button class="salvar-perfil" type="submit" name="salvar_perfil">Salvar Alterações</button>
-    
-
 </form>
 </div>
+
 </div>
 </div>
 
+<script>
+// Espera todo o conteúdo da página carregar (boa prática)
+document.addEventListener('DOMContentLoaded', function() {
 
+    // 1. Seleciona o formulário pelo ID que demos a ele
+    const formPerfil = document.getElementById('form-perfil');
+
+    // 2. Adiciona um "escutador" para o evento 'submit'
+    // Isso "pega" o clique no botão "Salvar Alterações"
+    formPerfil.addEventListener('submit', function(event) {
+        
+        // 3. Previne o envio NORMAL do formulário
+        event.preventDefault(); 
+
+        // 4. Mostra o SweetAlert de confirmação
+        Swal.fire({
+            title: 'Confirmar alterações?',
+            text: 'Você tem certeza que deseja salvar os novos dados?',
+            icon: 'question', // Ícone de interrogação
+            
+            showCancelButton: true, // Mostra o botão "Cancelar"
+            confirmButtonColor: '#9231FF',
+            cancelButtonColor: '#ff3153ff',
+            confirmButtonText: 'Sim, salvar!',
+            cancelButtonText: 'Cancelar'
+
+        }).then((result) => {
+            // 5. Verifica qual botão o usuário clicou
+            if (result.isConfirmed) {
+                // Se clicou em "Sim, salvar!",
+                // o JavaScript envia o formulário manualmente.
+                formPerfil.submit();
+            }
+            // Se clicou em "Cancelar", não faz nada.
+        });
+    });
+});
+</script>
 <?php require_once("../rodape.php")?>
