@@ -145,6 +145,7 @@
     align-items: center;
     margin-bottom: 20px;
     text-decoration: underline #9231FF;
+    margin-top: 10%;
 }
 
 /* BOTÃO SALVAR
@@ -164,4 +165,5 @@
     text-align: center;
     margin-top: 20px; /* Adiciona um espaço acima do botão */
 }
+
 
