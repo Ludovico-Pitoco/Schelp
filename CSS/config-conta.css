@@ -12,7 +12,7 @@
     width: 90%; 
     max-width: 400px; 
     text-align: center; 
-    margin: 100px auto 0 auto;
+    margin: 5% auto 0 auto;
     position: relative; 
 }
 
@@ -46,7 +46,7 @@
 
 
 .botao-foto {
-     background-color: #ffffff;
+    background-color: #ffffff;
     color: #3b82f6;
     border: none;
     cursor: pointer;
@@ -71,7 +71,7 @@
     bottom: 99%; /* Posiciona acima do botão */
     left: 40%;
     transform: translateX(-50%); 
-    background-color: #333;
+    background-color: #9231FF;
     color: #ffffff;
     padding: 8px 12px;
     border-radius: 4px;
@@ -83,6 +83,12 @@
     z-index: 10; /* Garante que fique por cima */
     margin-left: 170%;
     
+}
+
+.botao-foto:hover {
+    background-color: #9231FF;
+    color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 .botao-foto:hover::after {
@@ -163,8 +169,6 @@
     display: inline-block;
     line-height: 45px; 
     text-align: center;
-    margin-top: 20px; /* Adiciona um espaço acima do botão */
+    margin: 10px auto 30px auto;
 }
-
-
 
