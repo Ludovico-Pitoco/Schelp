@@ -46,7 +46,7 @@
 
 
 .botao-foto {
-    background-color: #ffffff;
+     background-color: #ffffff;
     color: #3b82f6;
     border: none;
     cursor: pointer;
@@ -58,8 +58,8 @@
     align-items: center;
     justify-content: center;
     position: absolute;
-    bottom: 235px; 
-    right: 120px; 
+    bottom: 245px; 
+    right: 130px; 
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
@@ -165,5 +165,6 @@
     text-align: center;
     margin-top: 20px; /* Adiciona um espaço acima do botão */
 }
+
 
 
